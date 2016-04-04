@@ -20,4 +20,14 @@
     </string>
     <string name="title_activity_language_options">LanguageOptions</string>
     <string name="title_activity_help">Help</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="title_menu_list">Menu</string>
+    <string name="title_menu_detail">Menu Detail</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_signal_list">SignalList</string>
+    <string name="title_activity_translate">TranslateActivity</string>
 </resources>

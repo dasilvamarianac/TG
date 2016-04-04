@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Translate">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Myo Status"
+        android:id="@+id/emgDataTextView"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:layout_below="@+id/sinalBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/iniciarBtn"
+        android:onClick="onClickSave"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/menuBtn"
+        android:background="@drawable/confirmar"
+        android:layout_margin="10dp" />
+
+    <com.echo.holographlibrary.LineGraph
+        android:id="@+id/holo_graph_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/iniciarBtn"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignEnd="@+id/menuBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:id="@+id/sinalBtn"
+        android:onClick="onClickEMG"
+        android:background="@drawable/sinais"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/textView"
+        android:layout_below="@+id/sinalBtn"
+        android:layout_alignStart="@+id/emgDataTextView" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView2"
+
+        android:src="@drawable/a"
+        android:layout_below="@+id/menuBtn"
+        android:layout_marginTop="70dp"
+        android:layout_toEndOf="@+id/textView" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/myoBtn"
+        android:onClick="onClickTest"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/myo"
+        android:layout_margin="10dp" />
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/menuBtn"
+        android:background="@drawable/menui"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>

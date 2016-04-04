@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class GestureDetectMethod {
     //Change to add new Gestures
-    private final static int COMPARE_NUM = 26;
+    private final static int COMPARE_NUM = 4;//26
     private final static int STREAM_DATA_LENGTH = 5;
     private final static Double THRESHOLD = 0.01;
 
@@ -23,7 +23,7 @@ public class GestureDetectMethod {
 
     public enum GestureState {
         Nothing,
-        A, B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,X,Z,W,Y
+        A,B,C,//D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,X,Z,W,Y
     }
 
     private GestureState getEnum(int i_gesture) {
@@ -35,7 +35,7 @@ public class GestureDetectMethod {
                 return GestureState.B;
             case 2:
                 return GestureState.C;
-            case 3:
+           /* case 3:
                 return GestureState.D;
             case 4:
                 return GestureState.E;
@@ -80,7 +80,7 @@ public class GestureDetectMethod {
             case 24:
                 return GestureState.W;
             case 25:
-                return GestureState.Y;
+                return GestureState.Y;*/
             default:
                 return GestureState.Nothing;
         }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/menuBtn"
+        android:background="@drawable/menui"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="right" />
+
+    <ListView android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp" />
+
+    <Button
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickScan"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/pesquisar" />
+
+</LinearLayout><!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/layout/activity_myolist.xml -->

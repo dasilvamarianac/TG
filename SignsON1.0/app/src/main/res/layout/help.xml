@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/bk">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fatecImg"
+        android:src="@drawable/fatec" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="340dp"
-        android:text="New Text"
-        android:id="@+id/textView2" />
+        android:id="@+id/txthelp"
+        android:layout_below="@+id/fatecImg"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/logo.img"
+        android:src="@drawable/logo64"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manualBtn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/textView2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView3" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="+ informaões:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/txthelp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView4" />
-</LinearLayout>
+</RelativeLayout>

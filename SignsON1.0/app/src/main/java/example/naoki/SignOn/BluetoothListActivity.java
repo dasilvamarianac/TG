@@ -70,7 +70,7 @@ public class BluetoothListActivity extends ActionBarActivity implements Bluetoot
                 myoName = item;
 
                 Intent intent;
-                intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent = new Intent(getApplicationContext(), SignalActivity.class);
 
                 intent.putExtra(TAG, myoName);
 

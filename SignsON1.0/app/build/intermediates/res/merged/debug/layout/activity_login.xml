@@ -3,63 +3,79 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="LOGIN"
+        android:text="E-MAIL"
         android:id="@+id/login"
-        android:layout_marginBottom="47dp"
-        android:layout_above="@+id/password"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
 
-        android:editable="true" />
+        android:editable="true"
+        android:layout_above="@+id/password"
+        android:layout_alignStart="@+id/password" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="PASSWORD"
+        android:text="SENHA"
         android:id="@+id/password"
         android:editable="true"
-        android:layout_centerVertical="true"
+        android:layout_alignBottom="@+id/senhaImg"
         android:layout_centerHorizontal="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:id="@+id/loginBtn"
-        android:layout_below="@+id/password"
-        android:layout_toStartOf="@+id/password"
-        android:layout_marginTop="66dp" />
+        android:background="@drawable/login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:id="@+id/createBtn"
 
-        android:layout_alignTop="@+id/loginBtn"
-        android:layout_alignStart="@+id/status" />
+        android:layout_alignBottom="@+id/loginBtn"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/usuario" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SignsON"
-        android:id="@+id/textView6"
-        android:layout_alignParentTop="true"
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/resenhaBtn"
+        android:layout_alignBottom="@+id/createBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:background="@drawable/resenha" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Status"
-        android:id="@+id/status"
-        android:layout_below="@+id/createBtn"
-        android:layout_toEndOf="@+id/password" />
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/emailImg"
+        android:src="@drawable/email"
+        android:layout_alignBottom="@+id/login"
+        android:layout_toStartOf="@+id/login"
+        android:layout_marginRight="10dp" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/senhaImg"
+        android:src="@drawable/senha"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/emailImg" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/menuBtn"
+        android:background="@drawable/menui"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>
 <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/layout/activity_login.xml -->

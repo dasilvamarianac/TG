@@ -22,6 +22,11 @@
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black_overlay">#66000000</color>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -75,6 +80,7 @@
     <declare-styleable name="ActionMenuView"/>
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
+    <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
     <declare-styleable name="CompatTextView"><attr format="reference|boolean" name="textAllCaps"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="topBottomBarArrowSize"/><attr format="dimension" name="middleBarArrowSize"/><attr format="dimension" name="barSize"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
@@ -86,6 +92,7 @@
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
+    <declare-styleable name="SignView"><attr format="string" name="exampleString"/><attr format="dimension" name="exampleDimension"/><attr format="color" name="exampleColor"/><attr format="color|reference" name="exampleDrawable"/></declare-styleable>
     <declare-styleable name="Spinner"><attr format="reference" name="prompt"/><attr format="enum" name="spinnerMode"><enum name="dialog" value="0"/><enum name="dropdown" value="1"/></attr><attr name="android:dropDownSelector"/><attr name="android:popupBackground"/><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/><attr name="android:dropDownWidth"/><attr format="reference" name="popupPromptView"/><attr name="android:gravity"/><attr format="boolean" name="disableChildrenWhenDisabled"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="reference" name="track"/><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
     <declare-styleable name="SwitchCompatTextAppearance"><attr name="android:textSize"/><attr name="android:textColor"/><attr name="textAllCaps"/></declare-styleable>
@@ -147,12 +154,21 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="item_width">200dp</dimen>
     <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="myosdk__activity_horizontal_margin">16dp</dimen>
     <dimen name="myosdk__activity_vertical_margin">16dp</dimen>
     <dimen name="myosdk__fragment_scan_window_height">0dp</dimen>
     <dimen name="myosdk__fragment_scan_window_width">0dp</dimen>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/items.xml -->
+    <eat-comment/>
+    <item format="float" name="slide_up_down_fraction" type="dimen">0.67</item>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="text_margin">16dp</dimen>
     <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
@@ -167,6 +183,13 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/integers.xml -->
+    <eat-comment/>
+    <integer name="half_slide_up_down_duration">150</integer>
+    <integer name="slide_up_down_duration">200</integer>
+    <integer name="slide_up_down_final_value">150</integer>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -189,6 +212,8 @@
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">SignsOn</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -212,6 +237,12 @@
     <string name="title_activity_language_options">LanguageOptions</string>
     <string name="title_activity_list">ListActivity</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_signal_list">SignalList</string>
+    <string name="title_menu_detail">Menu Detail</string>
+    <string name="title_menu_list">Menu</string>
     <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
@@ -226,7 +257,7 @@
     </style>
     <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Base.V21.Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
     </style>
     <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
@@ -1443,4 +1474,10 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
     <style name="myosdk__ScanActivityTheme" parent="android:Theme.Holo.Light"/>
+    <!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/menushow</item>
+        <item name="android:windowExitAnimation">@anim/menuhide</item>
+    </style>
 </resources>

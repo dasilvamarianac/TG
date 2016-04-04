@@ -39,8 +39,6 @@ public class LoginActivity extends ActionBarActivity  {
         DUMMY_CREDENTIALS.add("mari:luma");
         login = (EditText) findViewById(R.id.login);
         password = (EditText) findViewById(R.id.password);
-        status = (TextView) findViewById(R.id.status);
-
 
         Button login = (Button) findViewById(R.id.loginBtn);
         Button create = (Button) findViewById(R.id.createBtn);
@@ -191,7 +189,7 @@ public class LoginActivity extends ActionBarActivity  {
            // showProgress(false);
 
             if (success) {
-                Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent myIntent = new Intent(LoginActivity.this, SignalActivity.class);
                // myIntent.putExtra("key", value); //Optional parameters
                 LoginActivity.this.startActivity(myIntent);
                 finish();

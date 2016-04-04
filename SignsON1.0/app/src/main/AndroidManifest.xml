@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="example.naoki.ble_myo" >
+    package="example.naoki.ble_myo">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -21,14 +21,20 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        tools:replace="android:icon" >
+        tools:replace="android:icon">
         <activity
-            android:name="example.naoki.SignOn.LoginActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:name="example.naoki.SignOn.MyoListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="example.naoki.SignOn.SignalActivity" />
+        <activity
+            android:name="example.naoki.SignOn.Help"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="example.naoki.SignOn.MainActivity"
-            android:label="@string/app_name" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="example.naoki.SignOn.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,13 +42,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="example.naoki.SignOn.BluetoothListActivity"
-            android:label="@string/title_activity_list" >
-        </activity>
+            android:name="example.naoki.SignOn.UserActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name="example.naoki.SignOn.Help"
-            android:label="@string/title_activity_help" >
-        </activity>
+            android:name="example.naoki.SignOn.MenuActivity"
+            android:label="@string/title_activity_menu" />
+        <activity
+            android:name="example.naoki.SignOn.SignalListActivity"
+            android:label="@string/title_activity_signal_list" />
+        <activity
+            android:name="example.naoki.SignOn.TranslateActivity"
+            android:label="@string/title_activity_translate"/>
     </application>
 
 </manifest>
