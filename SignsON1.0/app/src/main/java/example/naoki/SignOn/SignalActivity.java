@@ -149,7 +149,7 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
     }
 
     public void onClickTest(View v) {
-       mMyoCallback.setMyoControlCommand(commandList.sendVibration3());
+        mMyoCallback.setMyoControlCommand(commandList.sendVibration3());
 
     }
 
@@ -169,8 +169,8 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
 
 
     public void onClickSave(View v) {
-      //  mGlass.postMessage("Envie");
-       // Log.d("connection","a"+mGlass.getConnectionStatus());
+        //  mGlass.postMessage("Envie");
+        // Log.d("connection","a"+mGlass.getConnectionStatus());
         if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Ready ||
                 saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
             saveModel   = new GestureSaveModel(saveMethod);
@@ -185,7 +185,7 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
 
     public void onClickDetect(View v) {
         if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
-           // gestureText.setText("Let's Go !!");
+            // gestureText.setText("Let's Go !!");
             detectMethod = new GestureDetectMethod(saveMethod.getCompareDataList());
             detectModel = new GestureDetectModel(detectMethod);
             startDetectModel();
@@ -275,4 +275,3 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
         }
     }
 }
-

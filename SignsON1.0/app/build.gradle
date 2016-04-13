@@ -35,4 +35,6 @@ dependencies {
     compile 'com.echo:holographlibrary:1.0'
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:recyclerview-v7:21.0.3'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+
 }

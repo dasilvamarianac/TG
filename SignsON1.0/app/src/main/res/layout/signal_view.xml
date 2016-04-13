@@ -29,4 +29,13 @@
         android:layout_toStartOf="@+id/verBtn"
         android:src="@drawable/correto"
         android:layout_marginRight="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomeTxt"
+        android:layout_alignBottom="@+id/verBtn"
+        android:layout_toEndOf="@+id/sinalImg"
+        android:layout_marginStart="45dp"
+        android:text="txto" />
 </RelativeLayout>

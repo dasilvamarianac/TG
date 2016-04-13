@@ -29,5 +29,14 @@
         android:layout_toStartOf="@+id/verBtn"
         android:src="@drawable/correto"
         android:layout_marginRight="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomeTxt"
+        android:layout_alignBottom="@+id/verBtn"
+        android:layout_toEndOf="@+id/sinalImg"
+        android:layout_marginStart="45dp"
+        android:text="txto" />
 </RelativeLayout>
-<!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/layout/sample_sign_view.xml -->
+<!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/layout/signal_view.xml -->

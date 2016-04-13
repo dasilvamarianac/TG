@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Translate">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:id="@+id/myoBtn"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onClickVibration"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/myo"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Myo Status"
+        android:id="@+id/emgDataTextView"
+        android:textSize="15dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_below="@+id/menuBtn" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/iniciarBtn"
+        android:onClick="onClickSave"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/iniciar"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/pausarBtn"
+        android:onClick="onClickDetect"
+        android:background="@drawable/pausar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/iniciarBtn"
+        android:layout_alignEnd="@+id/traducaoTxt" />
+
+    <com.echo.holographlibrary.LineGraph
+        android:id="@+id/holo_graph_view"
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/menuBtn"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/emgDataTextView" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/menuBtn"
+        android:background="@drawable/menui"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/traducaoTxt"
+        android:layout_below="@+id/emgDataTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/myoBtn" />
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Mariana/Documents/GitHub/TG/SignsON1.0/app/src/main/res/layout/activity_translate.xml -->

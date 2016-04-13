@@ -12,77 +12,66 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:layout_below="@+id/bEMG"
+        android:layout_below="@+id/sinalBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:id="@+id/bSave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/iniciarBtn"
         android:onClick="onClickSave"
-        android:layout_alignParentBottom="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Detect"
-        android:id="@+id/bDetect"
-        android:onClick="onClickDetect"
-        android:layout_alignTop="@+id/bSave"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gesture"
-        android:id="@+id/gestureTextView"
-        android:textSize="25dp"
-        android:layout_above="@+id/imageView2"
-        android:layout_toEndOf="@+id/button3" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/menuBtn"
+        android:background="@drawable/confirmar"
+        android:layout_margin="10dp" />
 
     <com.echo.holographlibrary.LineGraph
         android:id="@+id/holo_graph_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/bSave"
-        android:layout_alignEnd="@+id/bEMG" />
+        android:layout_above="@+id/iniciarBtn"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignEnd="@+id/menuBtn" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Teach Me"
-        android:id="@+id/bEMG"
+        android:layout_height="70dp"
+        android:id="@+id/sinalBtn"
         android:onClick="onClickEMG"
-        android:layout_below="@+id/menuBtn"
-        android:layout_alignEnd="@+id/menuBtn" />
+        android:background="@drawable/sinais"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Status"
         android:id="@+id/textView"
-        android:layout_below="@+id/bEMG"
+        android:layout_below="@+id/sinalBtn"
         android:layout_alignStart="@+id/emgDataTextView" />
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:id="@+id/imageView2"
 
-        android:layout_above="@+id/bSave"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/a"
+        android:layout_below="@+id/menuBtn"
+        android:layout_marginTop="70dp"
+        android:layout_toEndOf="@+id/textView" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="Test MYO"
-        android:id="@+id/button3"
+        android:id="@+id/myoBtn"
         android:onClick="onClickTest"
-        android:layout_alignBottom="@+id/holo_graph_view"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/myo"
+        android:layout_margin="10dp" />
     <Button
         android:layout_width="30dp"
         android:layout_height="30dp"

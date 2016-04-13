@@ -3,60 +3,82 @@ package example.naoki.SignOn;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import example.naoki.ble_myo.R;
 
 
 public class UserActivity extends Activity {
 
-
-    private static final ArrayList<String> DUMMY_CREDENTIALS = new ArrayList<String>();
-
-    private UserLoginTask mAuthTask = null;
-
+    private String type;
+    private String idUser;
     private EditText login;
     private EditText password;
+    private EditText conf;
+    private ImageView imge;
     private TextView status;
     private MenuActivity menui;
+    private RequestQueue requestQueue;
+    private static final String URL = "http://signson.orgfree.com/php/novo.php";
+    private static final String URL2 = "http://signson.orgfree.com/php/edit.php";
+    private StringRequest request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        DUMMY_CREDENTIALS.add("lucas:lucas");
-        DUMMY_CREDENTIALS.add("mari:luma");
-        login = (EditText) findViewById(R.id.login);
-        password = (EditText) findViewById(R.id.password);
 
-        Button login = (Button) findViewById(R.id.loginBtn);
+        SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+        idUser = prefs.getString("logado","");
+
+        login = (EditText) findViewById(R.id.loginEdt);
+        password = (EditText) findViewById(R.id.passEdt);
+        conf = (EditText) findViewById(R.id.confEdt);
+        imge = (ImageView) findViewById(R.id.emailImg);
+
+        login.setText(getIntent().getStringExtra("login"));
+        password.setText(getIntent().getStringExtra("password"));
+        type = getIntent().getStringExtra("type");
+
+        Button cancel = (Button) findViewById(R.id.cancelBtn);
         Button create = (Button) findViewById(R.id.createBtn);
-        create.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptCreate();
-            }
-        });
-        login.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
-
         Button menu = (Button) findViewById(R.id.menuBtn);
+
+        if (type.equals("0")){
+            menu.setVisibility(View.INVISIBLE);
+        }else{
+            login.setVisibility(View.INVISIBLE);
+            imge.setVisibility(View.INVISIBLE);
+
+        }
+
+
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 menui = new MenuActivity();
@@ -64,19 +86,35 @@ public class UserActivity extends Activity {
             }
         });
 
+        cancel.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        requestQueue = Volley.newRequestQueue(this);
+        create.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (type.equals("0")){
+                    attemptCreate();
+                }else{
+                    attemptEdit();
+                }
+            }
+        });
+
+
+
 
     }
     private void attemptCreate() {
         String email = login.getText().toString();
         String passwords = password.getText().toString();
+        String confp = conf.getText().toString();
         boolean cancel = false;
         View focusView = null;
-        if (!TextUtils.isEmpty(passwords) && !isPasswordValid(passwords)) {
-            password.setError(getString(R.string.error_invalid_password));
-            focusView = password;
-            cancel = true;
-        }
-
 
         if (TextUtils.isEmpty(email)) {
             login.setError(getString(R.string.error_field_required));
@@ -86,65 +124,129 @@ public class UserActivity extends Activity {
             login.setError(getString(R.string.error_invalid_email));
             focusView = login;
             cancel = true;
+        } else if(TextUtils.isEmpty(passwords)){
+            password.setError(getString(R.string.error_field_required));
+            focusView = password;
+            cancel = true;
+        } else if(!isPasswordValid(passwords)){
+            password.setError(getString(R.string.error_invalid_password));
+            focusView = password;
+            cancel = true;
+        } else if(TextUtils.isEmpty(confp)) {
+            conf.setError(getString(R.string.error_field_required));
+            focusView = conf;
+            cancel = true;
+        } else if (! confp.equals(passwords)) {
+            conf.setError(getString(R.string.error_incorrect_password));
+            focusView = conf;
+            cancel = true;
         }
 
         if (cancel) {
             focusView.requestFocus();
-
-            status.setText("Login Creation Failed");
         } else {
-            DUMMY_CREDENTIALS.add(email+":"+passwords);
-            status.setText("Login Created");
+
+            request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        if(jsonObject.names().get(0).equals("success")){
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Help.class));
+                        }else {
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                        }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    HashMap<String,String> hashMap = new HashMap<String, String>();
+                    hashMap.put("email",login.getText().toString());
+                    hashMap.put("password",password.getText().toString());
+
+                    return hashMap;
+                }
+            };
+            requestQueue.add(request);
         }
 
     }
 
-    private void attemptLogin() {
-        if (mAuthTask != null) {
-            return;
-        }
+    private void attemptEdit() {
 
-        // Reset errors.
-        login.setError(null);
-        password.setError(null);
-
-        // Store values at the time of the login attempt.
-        String email = login.getText().toString();
         String passwords = password.getText().toString();
-
+        String confp = conf.getText().toString();
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
-        /*if (!TextUtils.isEmpty(passwords) && !isPasswordValid(passwords)) {
-            password.setError(getString(R.string.error_invalid_password));
+       if(TextUtils.isEmpty(passwords)){
+            password.setError(getString(R.string.error_field_required));
             focusView = password;
             cancel = true;
-        }
-
-        // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            login.setError(getString(R.string.error_field_required));
-            focusView = login;
+       } else if(TextUtils.isEmpty(confp)) {
+           conf.setError(getString(R.string.error_field_required));
+           focusView = conf;
+           cancel = true;
+       } else if(!isPasswordValid(confp)){
+            conf.setError(getString(R.string.error_invalid_password));
+            focusView = conf;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            login.setError(getString(R.string.error_invalid_email));
-            focusView = login;
-            cancel = true;
-        }*/
+       }
 
-        if (cancel) {
-            // There was an error; don't attempt login and focus the first
-            // form field with an error.
+       if (cancel) {
             focusView.requestFocus();
-        } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-           // showProgress(true);
-            mAuthTask = new UserLoginTask(email, passwords);
-            mAuthTask.execute((Void) null);
+       } else {
+
+            request = new StringRequest(Request.Method.POST, URL2, new Response.Listener<String>() {
+
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        if(jsonObject.names().get(0).equals("success")){
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
+                        }else {
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                        }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    HashMap<String,String> hashMap = new HashMap<String, String>();
+                    hashMap.put("id",idUser);
+                    hashMap.put("password",password.getText().toString());
+                    hashMap.put("newpassword",conf.getText().toString());
+
+                    return hashMap;
+                }
+            };
+            requestQueue.add(request);
         }
+
     }
+
+
 
     private boolean isEmailValid(String email) {
 
@@ -153,66 +255,10 @@ public class UserActivity extends Activity {
 
     private boolean isPasswordValid(String password) {
 
-        return password.length() >= 6;
+        return password.length() >= 8;
     }
 
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
 
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
-
-        private final String mEmail;
-        private final String mPassword;
-
-        UserLoginTask(String email, String password) {
-            mEmail = email;
-            mPassword = password;
-        }
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-
-
-            try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
-            }
-
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
-            }
-
-            // TODO: register the new account here.
-            return true;
-        }
-
-        @Override
-        protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
-           // showProgress(false);
-
-            if (success) {
-                Intent myIntent = new Intent(UserActivity.this, SignalActivity.class);
-               // myIntent.putExtra("key", value); //Optional parameters
-                UserActivity.this.startActivity(myIntent);
-                finish();
-            } else {
-                password.setError(getString(R.string.error_incorrect_password));
-                password.requestFocus();
-            }
-        }
-
-        @Override
-        protected void onCancelled() {
-            mAuthTask = null;
-          //  showProgress(false);
-        }
-    }
 }
 

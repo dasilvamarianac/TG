@@ -278,4 +278,3 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         }
     }
 }
-

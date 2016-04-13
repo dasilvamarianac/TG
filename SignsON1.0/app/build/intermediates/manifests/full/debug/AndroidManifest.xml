@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature
@@ -20,7 +21,6 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -36,12 +36,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="example.naoki.SignOn.MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name="example.naoki.SignOn.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name="example.naoki.SignOn.UserActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,11 +44,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="example.naoki.SignOn.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="example.naoki.SignOn.UserActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name="example.naoki.SignOn.MenuActivity"
             android:label="@string/title_activity_menu" />
         <activity
             android:name="example.naoki.SignOn.SignalListActivity"
             android:label="@string/title_activity_signal_list" />
+        <activity
+            android:name="example.naoki.SignOn.TranslateActivity"
+            android:label="@string/title_activity_translate" />
         <activity
             android:name="com.thalmic.myo.scanner.ScanActivity"
             android:label="@string/myosdk__title_activity_scan"

@@ -2,6 +2,7 @@ package example.naoki.SignOn;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Gravity;
@@ -30,7 +31,6 @@ public class MenuActivity extends Activity {
 
     public boolean initiatePopupWindow(final Context c, View v) {
         try {
-// We need to get the instance of the LayoutInflater
 
             int w = v.getDisplay().getWidth();  // deprecated
             int h = v.getDisplay().getHeight();
@@ -76,8 +76,30 @@ public class MenuActivity extends Activity {
 
                 }
             });
+            Button Senha = (Button) layout.findViewById(R.id.asenhaBtn);
+            Senha.setOnClickListener(new View.OnClickListener() {
 
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(c, UserActivity.class);
+                    intent.putExtra("type", "1");
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                    c.startActivity(intent);
 
+                }
+            });
+
+            Button Logout = (Button) layout.findViewById(R.id.logoutBtn);
+            Logout.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                  SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+                  SharedPreferences.Editor editor = prefs.edit();
+                  editor.putString("logado", "");
+                  editor.commit();
+                }
+            });
 
             Button close = (Button) layout.findViewById(R.id.voltarBtn);
             close.setOnClickListener(new View.OnClickListener() {

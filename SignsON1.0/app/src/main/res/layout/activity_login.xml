@@ -6,29 +6,17 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="E-MAIL"
-        android:id="@+id/login"
-        android:layout_marginBottom="44dp"
-
-        android:editable="true"
-        android:layout_above="@+id/password"
-        android:layout_alignStart="@+id/password" />
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="SENHA"
-        android:id="@+id/password"
+        android:id="@+id/passEdt"
         android:editable="true"
         android:layout_alignBottom="@+id/senhaImg"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/emailEdt" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:id="@+id/loginBtn"
+        android:id="@+id/createBtn"
         android:background="@drawable/login"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
@@ -37,28 +25,28 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:id="@+id/createBtn"
+        android:id="@+id/cancelBtn"
 
-        android:layout_alignBottom="@+id/loginBtn"
+        android:layout_alignBottom="@+id/createBtn"
         android:layout_alignParentStart="true"
         android:background="@drawable/usuario" />
 
     <Button
-        android:layout_width="40dp"
+        android:layout_width="35dp"
         android:layout_height="40dp"
         android:id="@+id/resenhaBtn"
-        android:layout_alignBottom="@+id/createBtn"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/resenha" />
+        android:background="@drawable/resenha"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:id="@+id/emailImg"
         android:src="@drawable/email"
-        android:layout_alignBottom="@+id/login"
-        android:layout_toStartOf="@+id/login"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/emailEdt"
+        android:layout_toStartOf="@+id/emailEdt" />
 
     <ImageView
         android:layout_width="32dp"
@@ -68,13 +56,17 @@
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/emailImg" />
 
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/menuBtn"
-        android:background="@drawable/menui"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="E-MAIL"
+        android:id="@+id/emailEdt"
+        android:editable="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="25dp"
+        android:layout_above="@+id/passEdt"
+        android:layout_toEndOf="@+id/cancelBtn" />
+
 
 </RelativeLayout>

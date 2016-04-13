@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import example.naoki.ble_myo.R;
@@ -18,9 +19,17 @@ import example.naoki.ble_myo.R;
 public class SignalListActivity extends Activity {
     private MenuActivity menui;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle instance) {
+        super.onCreate(instance);
         setContentView(R.layout.activity_signal_list);
+
+        ListView lista = (ListView) findViewById(R.id.sinaisLvi);
+
+        String[] n = {"Felipe", "Joao", "Zé"};
+        List<String> nomes = Arrays.asList(n);
+
+        SinalAdapter adapter = new SinalAdapter(this, nomes);
+        lista.setAdapter(adapter);
 
 
         Button menu = (Button) findViewById(R.id.menuBtn);
