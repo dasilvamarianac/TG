@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="example.naoki.ble_myo">
 
+
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,7 +14,6 @@
         android:name="android.hardware.bluetooth_le"
         android:required="true" />
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -23,12 +24,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+
         <activity
             android:name="example.naoki.SignOn.MyoListActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name="example.naoki.SignOn.SignalActivity" />
         <activity
-            android:name="example.naoki.SignOn.Help"
+            android:name="example.naoki.SignOn.HelpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name="example.naoki.SignOn.MainActivity"
@@ -51,10 +53,12 @@
             android:label="@string/title_activity_menu" />
         <activity
             android:name="example.naoki.SignOn.SignalListActivity"
-            android:label="@string/title_activity_signal_list" />
+            android:label="@string/title_activity_signal_list" >
+        </activity>
         <activity
             android:name="example.naoki.SignOn.TranslateActivity"
             android:label="@string/title_activity_translate"/>
+
     </application>
 
 </manifest>

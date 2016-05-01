@@ -1,5 +1,7 @@
 package example.naoki.SignOn;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,10 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.PopupWindow;
-
-import java.util.prefs.Preferences;
 
 import example.naoki.ble_myo.R;
 
@@ -48,7 +47,7 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(c, Help.class);
+                    Intent intent = new Intent(c, HelpActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     c.startActivity(intent);
                 }
@@ -94,10 +93,19 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
-                  SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
-                  SharedPreferences.Editor editor = prefs.edit();
-                  editor.putString("logado", "");
-                  editor.commit();
+
+                  SharedPreferences prefs = getSharedPreferences("signson", 0);
+                  prefs.edit().clear().commit();
+
+
+                  Intent mStartActivity = new Intent(c, MainActivity.class);
+                  int mPendingIntentId = 123456;
+                  PendingIntent mPendingIntent = PendingIntent.getActivity(c, mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+                  AlarmManager mgr = (AlarmManager)c.getSystemService(Context.ALARM_SERVICE);
+                  mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+                  System.exit(0);
+
+
                 }
             });
 

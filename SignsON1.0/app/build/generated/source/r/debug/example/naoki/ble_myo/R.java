@@ -1392,14 +1392,15 @@ containing a value of this type.
         public static final int myo=0x7f020049;
         public static final int myosdk__connected_dot=0x7f02004a;
         public static final int myosdk__firmware_incompatible_dot=0x7f02004b;
-        public static final int pausar=0x7f02004c;
-        public static final int pesquisar=0x7f02004d;
-        public static final int popup_black=0x7f02004e;
-        public static final int resenha=0x7f02004f;
-        public static final int senha=0x7f020050;
-        public static final int sinais=0x7f020051;
-        public static final int usuario=0x7f020052;
-        public static final int ver=0x7f020053;
+        public static final int not=0x7f02004c;
+        public static final int pausar=0x7f02004d;
+        public static final int pesquisar=0x7f02004e;
+        public static final int popup_black=0x7f02004f;
+        public static final int resenha=0x7f020050;
+        public static final int senha=0x7f020051;
+        public static final int sinais=0x7f020052;
+        public static final int usuario=0x7f020053;
+        public static final int ver=0x7f020054;
     }
     public static final class id {
         public static final int action_bar=0x7f0d0031;
@@ -1415,7 +1416,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d002e;
         public static final int action_mode_bar_stub=0x7f0d002d;
         public static final int action_mode_close_button=0x7f0d0020;
-        public static final int action_settings=0x7f0d0077;
+        public static final int action_settings=0x7f0d0076;
         public static final int activity_chooser_view_content=0x7f0d0021;
         public static final int always=0x7f0d0016;
         public static final int asenhaBtn=0x7f0d004d;
@@ -1471,14 +1472,13 @@ containing a value of this type.
         public static final int menuImg=0x7f0d004a;
         public static final int middle=0x7f0d0015;
         public static final int myoBtn=0x7f0d0051;
-        public static final int myosdk__action_scan=0x7f0d0078;
+        public static final int myosdk__action_scan=0x7f0d0077;
         public static final int myosdk__connection_state_dot=0x7f0d0071;
         public static final int myosdk__fragment_scan=0x7f0d006e;
         public static final int myosdk__progress=0x7f0d0070;
         public static final int myosdk__required_firmware_version_text=0x7f0d006f;
         public static final int myosdk__scan_result_view=0x7f0d0072;
         public static final int never=0x7f0d0019;
-        public static final int nomeTxt=0x7f0d0076;
         public static final int none=0x7f0d000e;
         public static final int normal=0x7f0d000a;
         public static final int passEdt=0x7f0d0041;
@@ -1507,9 +1507,10 @@ containing a value of this type.
         public static final int sinaisLvi=0x7f0d0064;
         public static final int sinalBtn=0x7f0d0052;
         public static final int sinalImg=0x7f0d0073;
+        public static final int sinalTxt=0x7f0d0075;
         public static final int sobreBtn=0x7f0d0050;
         public static final int split_action_bar=0x7f0d0007;
-        public static final int statusImg=0x7f0d0075;
+        public static final int statusImg=0x7f0d0074;
         public static final int submit_area=0x7f0d003c;
         public static final int tabMode=0x7f0d000b;
         public static final int textView=0x7f0d0063;
@@ -1519,7 +1520,6 @@ containing a value of this type.
         public static final int txthelp=0x7f0d006a;
         public static final int up=0x7f0d0008;
         public static final int useLogo=0x7f0d0012;
-        public static final int verBtn=0x7f0d0074;
         public static final int voltarBtn=0x7f0d004f;
         public static final int withText=0x7f0d001a;
         public static final int wrap_content=0x7f0d001d;

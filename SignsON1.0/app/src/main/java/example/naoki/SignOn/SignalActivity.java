@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import android.bluetooth.BluetoothManager;
@@ -122,7 +121,7 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
                 startActivity(intent);
                 return true;
             case MENU_HELP:
-                Intent intent3 = new Intent(this,Help.class);
+                Intent intent3 = new Intent(this,HelpActivity.class);
                 intent3.putExtra("GlassAdrres", mPrefs.getGlassAddress());
                 intent3.putExtra("MyoAddress", mPrefs.getMyoAddress());
                 startActivity(intent3);

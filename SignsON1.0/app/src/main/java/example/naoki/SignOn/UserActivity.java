@@ -1,11 +1,8 @@
 package example.naoki.SignOn;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,7 +24,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -104,10 +100,6 @@ public class UserActivity extends Activity {
                 }
             }
         });
-
-
-
-
     }
     private void attemptCreate() {
         String email = login.getText().toString();
@@ -154,7 +146,7 @@ public class UserActivity extends Activity {
                         JSONObject jsonObject = new JSONObject(response);
                         if(jsonObject.names().get(0).equals("success")){
                             Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), Help.class));
+                            startActivity(new Intent(getApplicationContext(), HelpActivity.class));
                         }else {
                             Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }
@@ -184,29 +176,28 @@ public class UserActivity extends Activity {
     }
 
     private void attemptEdit() {
-
         String passwords = password.getText().toString();
         String confp = conf.getText().toString();
         boolean cancel = false;
         View focusView = null;
 
-       if(TextUtils.isEmpty(passwords)){
+        if(TextUtils.isEmpty(passwords)){
             password.setError(getString(R.string.error_field_required));
             focusView = password;
             cancel = true;
-       } else if(TextUtils.isEmpty(confp)) {
+        } else if(TextUtils.isEmpty(confp)) {
            conf.setError(getString(R.string.error_field_required));
            focusView = conf;
            cancel = true;
-       } else if(!isPasswordValid(confp)){
+        } else if(!isPasswordValid(confp)){
             conf.setError(getString(R.string.error_invalid_password));
             focusView = conf;
             cancel = true;
-       }
+        }
 
-       if (cancel) {
+        if (cancel) {
             focusView.requestFocus();
-       } else {
+        } else {
 
             request = new StringRequest(Request.Method.POST, URL2, new Response.Listener<String>() {
 
@@ -220,7 +211,6 @@ public class UserActivity extends Activity {
                         }else {
                             Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -235,8 +225,8 @@ public class UserActivity extends Activity {
                 protected Map<String, String> getParams() throws AuthFailureError {
                     HashMap<String,String> hashMap = new HashMap<String, String>();
                     hashMap.put("id",idUser);
-                    hashMap.put("password",password.getText().toString());
                     hashMap.put("newpassword",conf.getText().toString());
+                    hashMap.put("password",password.getText().toString());
 
                     return hashMap;
                 }
@@ -245,8 +235,6 @@ public class UserActivity extends Activity {
         }
 
     }
-
-
 
     private boolean isEmailValid(String email) {
 
@@ -257,8 +245,5 @@ public class UserActivity extends Activity {
 
         return password.length() >= 8;
     }
-
-
-
 }
 

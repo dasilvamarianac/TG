@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -77,7 +78,6 @@ public class LoginActivity extends Activity {
         pass.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "TOMAR NO CU ", Toast.LENGTH_SHORT).show();
                 attemptEmail();
             }
         });
@@ -105,6 +105,8 @@ public class LoginActivity extends Activity {
             focusView = password;
             cancel = true;
         }
+
+
         if (cancel) {
             focusView.requestFocus();
         } else {
@@ -115,8 +117,8 @@ public class LoginActivity extends Activity {
                 public void onResponse(String response) {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
-                        if(jsonObject.names().get(0).equals("success")){
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"),Toast.LENGTH_SHORT).show();
+                        if (jsonObject.names().get(0).equals("success")) {
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
 
                             SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
@@ -124,10 +126,9 @@ public class LoginActivity extends Activity {
                             editor.commit();
 
                             startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
-                        }else {
-                            Toast.makeText(getApplicationContext(), "Erro" +jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Erro" + jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -138,18 +139,16 @@ public class LoginActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
                 }
             }){
-                @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
-                    HashMap<String,String> hashMap = new HashMap<String, String>();
-                    hashMap.put("email",login.getText().toString());
-                    hashMap.put("password",password.getText().toString());
+                    HashMap<String, String> hashMap = new HashMap<String, String>();
+                    hashMap.put("email", login.getText().toString());
+                    hashMap.put("password", password.getText().toString());
 
                     return hashMap;
                 }
             };
             requestQueue.add(request);
         }
-
 
     }
 

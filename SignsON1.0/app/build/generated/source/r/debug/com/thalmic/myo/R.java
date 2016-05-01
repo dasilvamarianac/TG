@@ -24,7 +24,7 @@ public final class R {
 		public static final int myosdk__firmware_incompatible_dot = 0x7f02004b;
 	}
 	public static final class id {
-		public static final int myosdk__action_scan = 0x7f0d0078;
+		public static final int myosdk__action_scan = 0x7f0d0077;
 		public static final int myosdk__connection_state_dot = 0x7f0d0071;
 		public static final int myosdk__fragment_scan = 0x7f0d006e;
 		public static final int myosdk__progress = 0x7f0d0070;

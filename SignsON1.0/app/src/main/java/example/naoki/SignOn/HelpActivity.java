@@ -12,7 +12,7 @@ import example.naoki.ble_myo.R;
 
 
 
-public class Help extends Activity implements View.OnClickListener {
+public class HelpActivity extends Activity implements View.OnClickListener {
     TextView help;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
