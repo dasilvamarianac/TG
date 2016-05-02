@@ -75,5 +75,87 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_above="@+id/myoBtn" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="1"
+        android:id="@+id/btn_emg1"
+        android:textSize="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="2"
+        android:id="@+id/btn_emg2"
+        android:textSize="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btn_emg3"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="3"
+        android:id="@+id/btn_emg3"
+        android:textSize="10dp"
+        android:layout_toStartOf="@+id/btn_emg4"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="4"
+        android:id="@+id/btn_emg4"
+        android:textSize="10dp"
+        android:layout_toStartOf="@+id/iniciarBtn"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="5"
+        android:id="@+id/btn_emg5"
+        android:layout_toEndOf="@+id/btn_emg4"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="6"
+        android:id="@+id/btn_emg6"
+        android:textSize="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/iniciarBtn"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="7"
+        android:id="@+id/btn_emg7"
+        android:textSize="10dp"
+        android:layout_toEndOf="@+id/iniciarBtn"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="8"
+        android:id="@+id/btn_emg8"
+        android:textSize="10dp"
+        android:layout_toStartOf="@+id/pausarBtn"
+        android:visibility="invisible" />
 
 </RelativeLayout>

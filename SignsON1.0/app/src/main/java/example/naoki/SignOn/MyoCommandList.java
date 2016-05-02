@@ -1,6 +1,12 @@
 package example.naoki.SignOn;
 
-
+/**
+ * Created by naoki on 15/04/13.
+ * 
+ * This class is List of Myo Commands, allowing to
+ * [https://github.com/thalmiclabs/myo-bluetooth].
+ *
+ */
  
 public class MyoCommandList {
     private byte[] send_bytes_data;
@@ -38,7 +44,14 @@ public class MyoCommandList {
         return send_bytes_data;
     }
 
+    public byte[] sendUnLock() {
+        byte command_unlock = (byte) 0x0a;
+        byte payload_unlock = (byte) 1;
+        byte unlock_type = (byte) 0x01;
+        send_bytes_data = new byte[]{command_unlock, payload_unlock, unlock_type};
 
+        return send_bytes_data;
+    }
 
     public byte[] sendUnSleep() {
         byte command_sleep_mode = (byte) 0x09;

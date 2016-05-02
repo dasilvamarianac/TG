@@ -1,18 +1,20 @@
 package example.naoki.SignOn;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
-import android.bluetooth.BluetoothManager;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ import example.naoki.ble_myo.R;
 public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.LeScanCallback {
     public static final int MENU_LIST = 0;
     public static final int MENU_BYE = 1;
+    private MenuActivity menui;
 
     /** Device Scanning Time (ms) */
     private static final long SCAN_PERIOD = 5000;
@@ -46,9 +49,9 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
     private String deviceName;
 
-    private GestureSaveModel    saveModel;
-    private GestureSaveMethod   saveMethod;
-    private GestureDetectModel  detectModel;
+    private GestureSaveModel saveModel;
+    private GestureSaveMethod saveMethod;
+    private GestureDetectModel detectModel;
     private GestureDetectMethod detectMethod;
 
     private LineGraph graph;
@@ -64,7 +67,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signal);
 
         //ready
         graph = (LineGraph) findViewById(R.id.holo_graph_view);
@@ -118,6 +121,14 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
                 mBluetoothAdapter.startLeScan(this);
             }
         }
+
+        Button menu = (Button) findViewById(R.id.menuBtn);
+        menu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                menui = new MenuActivity();
+                menui.initiatePopupWindow(MyoActivity.this, v);
+            }
+        });
     }
 
     @Override
@@ -185,6 +196,12 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     public void onClickVibration(View v){
         if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendVibration3())) {
             Log.d(TAG, "False Vibrate");
+        }
+    }
+
+    public void onClickUnlock(View v) {
+        if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendUnLock())) {
+            Log.d(TAG,"False UnLock");
         }
     }
 
@@ -278,3 +295,4 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         }
     }
 }
+

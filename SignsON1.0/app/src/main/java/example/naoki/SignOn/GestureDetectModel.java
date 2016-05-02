@@ -1,5 +1,8 @@
 package example.naoki.SignOn;
 
+/**
+ * Created by naoki on 15/04/16.
+ */
 public class GestureDetectModel implements IGestureDetectModel{
     private final static Object LOCK = new Object();
 
@@ -26,7 +29,7 @@ public class GestureDetectModel implements IGestureDetectModel{
 
     @Override
     public void action() {
-        action.action("Detect");
+        action.action("DETECT");
     }
 
     public void action(String message) {

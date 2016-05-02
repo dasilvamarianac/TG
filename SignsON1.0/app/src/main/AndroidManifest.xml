@@ -28,7 +28,6 @@
         <activity
             android:name="example.naoki.SignOn.MyoListActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="example.naoki.SignOn.SignalActivity" />
         <activity
             android:name="example.naoki.SignOn.HelpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -37,7 +36,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -58,6 +56,15 @@
         <activity
             android:name="example.naoki.SignOn.TranslateActivity"
             android:label="@string/title_activity_translate"/>
+        <activity
+            android:name="example.naoki.SignOn.SignalActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name="example.naoki.SignOn.MyoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
 
     </application>
 

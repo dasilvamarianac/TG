@@ -82,13 +82,13 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
             }
         });
 
-        Button menu = (Button) findViewById(R.id.menuBtn);
+        /*Button menu = (Button) findViewById(R.id.menuBtn);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 menui = new MenuActivity();
                 menui.initiatePopupWindow(MyoListActivity.this, v);
             }
-        });
+        });*/
 
     }
 

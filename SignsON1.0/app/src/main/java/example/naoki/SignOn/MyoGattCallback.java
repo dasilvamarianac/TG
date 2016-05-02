@@ -22,7 +22,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.UUID;
 
-
+/**
+ * Created by naoki on 15/04/15.
+ */
  
 public class MyoGattCallback extends BluetoothGattCallback {
     /** Service ID */
@@ -53,14 +55,14 @@ public class MyoGattCallback extends BluetoothGattCallback {
     private int[] emgDatas = new int[16];
 
     private LineGraph lineGraph;
-   /* private Button btn_emg1;
+    private Button btn_emg1;
     private Button btn_emg2;
     private Button btn_emg3;
     private Button btn_emg4;
     private Button btn_emg5;
     private Button btn_emg6;
     private Button btn_emg7;
-    private Button btn_emg8;*/
+    private Button btn_emg8;
 
     private int nowGraphIndex = 0;
     private Button nowButton;
@@ -72,7 +74,7 @@ public class MyoGattCallback extends BluetoothGattCallback {
         mHandler = handler;
         dataView = view;
         lineGraph = (LineGraph) views.get("graph");
-       /* btn_emg1 = (Button) views.get("btn1");
+        btn_emg1 = (Button) views.get("btn1");
         nowButton = btn_emg1;
         btn_emg1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
@@ -132,7 +134,7 @@ public class MyoGattCallback extends BluetoothGattCallback {
                 nowGraphIndex = 7;
                 nowButton = btn_emg8;
             }
-        });*/
+        });
     }
 
     @Override
@@ -344,7 +346,7 @@ public class MyoGattCallback extends BluetoothGattCallback {
                         dataList1_a[inputIndex][0] = emgDatas[0+inputIndex];
                         dataList1_b[inputIndex][0] = emgDatas[7+inputIndex];
                     }
-
+                    // ??????
                     int number = 50;
                     int addNumber = 100;
                     Line line = new Line();
@@ -352,19 +354,19 @@ public class MyoGattCallback extends BluetoothGattCallback {
                         number--;
                         addNumber--;
 
-
+                        //???add
                         if(number != 0){
                         for(int setDatalistIndex = 0;setDatalistIndex < 8;setDatalistIndex++){
                             dataList1_a[setDatalistIndex][number] = dataList1_a[setDatalistIndex][number - 1];
                         }
                         }
                         LinePoint linePoint = new LinePoint();
-                        linePoint.setY(dataList1_a[nowGraphIndex][number]);
-                        linePoint.setX(addNumber); //x軸を１ずつずらしてSet
-                        //linePoint.setColor(Color.parseColor("#9acd32"));
+                        linePoint.setY(dataList1_a[nowGraphIndex][number]); //???????????Set
+                        linePoint.setX(addNumber); //x?????????Set
+                        //linePoint.setColor(Color.parseColor("#9acd32")); // ????Set
 
                         line.addPoint(linePoint);
-                        //2点目add
+                        //2??add
                         /////number--;
                         addNumber--;
                         if(number != 0){
@@ -373,20 +375,20 @@ public class MyoGattCallback extends BluetoothGattCallback {
                             }
                         }
                         linePoint = new LinePoint();
-                        linePoint.setY(dataList1_b[nowGraphIndex][number]);
-                        linePoint.setX(addNumber); //x軸を１ずつずらしてSet
-                        //linePoint.setColor(Color.parseColor("#9acd32"));
+                        linePoint.setY(dataList1_b[nowGraphIndex][number]); //???????????Set
+                        linePoint.setX(addNumber); //x?????????Set
+                        //linePoint.setColor(Color.parseColor("#9acd32")); // ????Set
 
                         line.addPoint(linePoint);
                     }
                     if(nowButton != null) {
-                        //line.setColor(Color.parseColor("#9acd32"));
-                        line.setColor(((ColorDrawable)nowButton.getBackground()).getColor());
+                        //line.setColor(Color.parseColor("#9acd32")); // ????Set
+                        line.setColor(((ColorDrawable)nowButton.getBackground()).getColor()); // ????Set
                     }
                     line.setShowingPoints(false);
                     lineGraph.addLine(line);
-                    lineGraph.setRangeY(-128, 128);
-                    //graph.setRangeX(0, 100);
+                    lineGraph.setRangeY(-128, 128); // ????Y????????? ???0??1??
+                    //graph.setRangeX(0, 100); // ????X?????????????0?????????????
                 }
             });
 

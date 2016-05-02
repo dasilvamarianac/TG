@@ -35,7 +35,7 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
     public static final int MENU_BYE = 2;
     public static final int MENU_OPTIONS = 1;
     public static final int MENU_HELP = 3;
-    public static final char letters[] = { 'A','B','C','D'};//'E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Z','W','Y'};
+    public static final char letters[] = { 'A','B','C','D'};
     private static final long SCAN_PERIOD = 6000;
 
     private static final int REQUEST_ENABLE_BT = 1;
@@ -65,7 +65,7 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signal);
         graph = (LineGraph) findViewById(R.id.holo_graph_view);
-        text = (TextView) findViewById(R.id.textView);
+        text = (TextView) findViewById(R.id.gestureTextView);
         mPrefs = new AppPrefs(this);
         emgDataText = (TextView)findViewById(R.id.emgDataTextView);
         gestureText = (TextView)findViewById(R.id.gestureTextView);
@@ -95,7 +95,7 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
                 mBluetoothAdapter.startLeScan(this);
             }
         }
-        //bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
+
         Button menu = (Button) findViewById(R.id.menuBtn);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -111,25 +111,6 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
         this.closeBLEGatt();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        switch (id) {
-            case MENU_LIST:
-                Intent intent = new Intent(this,BluetoothListActivity.class);
-                startActivity(intent);
-                return true;
-            case MENU_HELP:
-                Intent intent3 = new Intent(this,HelpActivity.class);
-                intent3.putExtra("GlassAdrres", mPrefs.getGlassAddress());
-                intent3.putExtra("MyoAddress", mPrefs.getMyoAddress());
-                startActivity(intent3);
-                return true;
-
-        }
-        return false;
-    }
 
 
     @Override
@@ -252,25 +233,6 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
                 }
             }, SCAN_PERIOD);
             mBluetoothAdapter.startLeScan(this);
-        }
-    }
-
-
-    // Called when a message from Glass is received
-    public void onReceivedEnvelope(Proto.Envelope envelope){
-        if (envelope.screenshot != null) {
-            if (envelope.screenshot.screenshotBytesG2C != null) {
-                InputStream in = new ByteArrayInputStream(envelope.screenshot.screenshotBytesG2C);
-                final Bitmap bp = BitmapFactory.decodeStream(in);
-
-                // Update the UI
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-                });
-            }
         }
     }
 }

@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/ByteReader.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/EmgCharacteristicData.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/EmgData.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/GestureDetectMethod.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/GestureDetectModel.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/GestureDetectModelManager.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/GestureDetectSendResultAction.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/GestureSaveMethod.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/GestureSaveModel.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/IGestureDetectAction.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/IGestureDetectModel.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/MyoActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/MyoCommandList.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/MyoDataFileReader.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/MyoGattCallback.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/MyoListActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/NopModel.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/example/naoki/SignOn/NumberSmoother.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/anim" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/animator" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/values/integers.xml" charset="windows-1252" />

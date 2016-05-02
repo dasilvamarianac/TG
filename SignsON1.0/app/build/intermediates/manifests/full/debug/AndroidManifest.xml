@@ -23,13 +23,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name="example.naoki.SignOn.MyoListActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="example.naoki.SignOn.SignalActivity" />
         <activity
             android:name="example.naoki.SignOn.HelpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -59,6 +58,14 @@
         <activity
             android:name="example.naoki.SignOn.TranslateActivity"
             android:label="@string/title_activity_translate" />
+        <activity
+            android:name="example.naoki.SignOn.SignalActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="example.naoki.SignOn.MyoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
         <activity
             android:name="com.thalmic.myo.scanner.ScanActivity"
             android:label="@string/myosdk__title_activity_scan"

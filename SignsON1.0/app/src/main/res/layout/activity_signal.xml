@@ -3,75 +3,6 @@
     android:layout_height="match_parent"
     tools:context=".Translate">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Myo Status"
-        android:id="@+id/emgDataTextView"
-        android:textSize="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:layout_below="@+id/sinalBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
-
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/iniciarBtn"
-        android:onClick="onClickSave"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/menuBtn"
-        android:background="@drawable/confirmar"
-        android:layout_margin="10dp" />
-
-    <com.echo.holographlibrary.LineGraph
-        android:id="@+id/holo_graph_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/iniciarBtn"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignEnd="@+id/menuBtn" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/sinalBtn"
-        android:onClick="onClickEMG"
-        android:background="@drawable/sinais"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Status"
-        android:id="@+id/textView"
-        android:layout_below="@+id/sinalBtn"
-        android:layout_alignStart="@+id/emgDataTextView" />
-
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:id="@+id/imageView2"
-
-        android:src="@drawable/a"
-        android:layout_below="@+id/menuBtn"
-        android:layout_marginTop="70dp"
-        android:layout_toEndOf="@+id/textView" />
-
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/myoBtn"
-        android:onClick="onClickTest"
-        android:layout_above="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/myo"
-        android:layout_margin="10dp" />
     <Button
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -81,5 +12,201 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp" />
 
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Myo Status"
+        android:id="@+id/emgDataTextView"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:nestedScrollingEnabled="true"
+        android:editable="false"
+        android:enabled="false"
+        android:layout_below="@+id/menuBtn"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <com.echo.holographlibrary.LineGraph
+        android:id="@+id/holo_graph_view"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:visibility="visible"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignEnd="@+id/menuBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="1"
+        android:id="@+id/btn_emg1"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/holo_graph_view"
+        android:layout_alignStart="@+id/emgDataTextView" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="2"
+        android:id="@+id/btn_emg2"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/holo_graph_view"
+        android:layout_toEndOf="@+id/btn_emg1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="3"
+        android:id="@+id/btn_emg3"
+        android:layout_alignTop="@+id/btn_emg2"
+        android:layout_toEndOf="@+id/btn_emg2"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="4"
+        android:id="@+id/btn_emg4"
+        android:layout_alignTop="@+id/btn_emg3"
+        android:layout_toEndOf="@+id/btn_emg3"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="5"
+        android:id="@+id/btn_emg5"
+        android:textSize="10dp"
+        android:layout_alignTop="@+id/btn_emg4"
+        android:layout_toEndOf="@+id/btn_emg4"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="6"
+        android:id="@+id/btn_emg6"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/btn_emg5"
+        android:layout_toEndOf="@+id/btn_emg5" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="7"
+        android:id="@+id/btn_emg7"
+        android:textSize="10dp"
+        android:layout_alignTop="@+id/btn_emg6"
+        android:layout_toEndOf="@+id/btn_emg6"
+        android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:text="8"
+        android:id="@+id/btn_emg8"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/btn_emg7"
+        android:layout_toEndOf="@+id/btn_emg7" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/a"
+        android:id="@+id/imageView2"
+
+        android:layout_above="@+id/holo_graph_view"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gesture"
+        android:id="@+id/gestureTextView"
+        android:textSize="25dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/holo_graph_view"
+        android:id="@+id/relativeLayout">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bVibrate"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onClickVibration"
+            android:background="@drawable/myo"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bStopEmg"
+            android:onClick="onClickNoEMG"
+            android:visibility="visible"
+            android:background="@drawable/pausar"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/bSave"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bEMG"
+            android:onClick="onClickEMG"
+            android:background="@drawable/iniciar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bDetect"
+            android:onClick="onClickDetect"
+            android:background="@drawable/sinais"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/bVibrate"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bSave"
+            android:onClick="onClickSave"
+            android:background="@drawable/confirmar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
 
 </RelativeLayout>

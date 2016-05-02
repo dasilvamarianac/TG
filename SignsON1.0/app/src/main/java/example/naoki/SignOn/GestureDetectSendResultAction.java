@@ -1,11 +1,13 @@
 package example.naoki.SignOn;
 
-
+/**
+ * Created by naoki on 15/04/16.
+ */
 public class GestureDetectSendResultAction implements IGestureDetectAction {
     MyoActivity activity;
 
-    public GestureDetectSendResultAction(MyoActivity translateActivity){
-        activity = translateActivity;
+    public GestureDetectSendResultAction(MyoActivity mainActivity){
+        activity = mainActivity;
     }
 
     @Override

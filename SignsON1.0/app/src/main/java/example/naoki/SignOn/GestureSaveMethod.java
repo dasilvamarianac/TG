@@ -4,12 +4,14 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-
+/**
+ * Created by naoki on 15/04/17.
+ */
 public class GestureSaveMethod {
     private final static String TAG = "Myo_compare";
     private final static String FileName = "compareData.dat";
-        //cHANGE TO ADD MORE MOVES
-    private final static int COMPARE_NUM = 26;
+
+    private final static int COMPARE_NUM = 3;
     private final static int SAVE_DATA_LENGTH = 5;
     private final static int AVERAGING_LENGTH = 10;
 

@@ -3,7 +3,11 @@ package example.naoki.SignOn;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-
+/**
+ * Created by naoki on 15/04/09.
+ *
+ */
+ 
 public class EmgData {
     private ArrayList<Double> emgData = new ArrayList<>();
 
