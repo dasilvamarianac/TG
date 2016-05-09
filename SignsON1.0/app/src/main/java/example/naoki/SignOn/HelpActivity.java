@@ -37,7 +37,7 @@ public class HelpActivity extends Activity implements View.OnClickListener {
 
     public void onClick(View view) {
 
-        Uri uri = Uri.parse("http://signson.orgfree.com/instrucoes");
+        Uri uri = Uri.parse("http://signson.orgfree.com");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

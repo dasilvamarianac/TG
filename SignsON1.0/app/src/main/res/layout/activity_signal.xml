@@ -132,7 +132,8 @@
         android:id="@+id/imageView2"
 
         android:layout_above="@+id/holo_graph_view"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,7 +142,8 @@
         android:id="@+id/gestureTextView"
         android:textSize="25dp"
         android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:orientation="horizontal"
@@ -180,11 +182,12 @@
             android:layout_height="50dp"
             android:id="@+id/bEMG"
             android:onClick="onClickEMG"
-            android:background="@drawable/iniciar"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/bVibrate"
+            android:visibility="visible"
+            android:background="@drawable/iniciar" />
 
         <Button
             android:layout_width="50dp"
@@ -192,10 +195,11 @@
             android:id="@+id/bDetect"
             android:onClick="onClickDetect"
             android:background="@drawable/sinais"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/bVibrate"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="50dp"
@@ -208,5 +212,16 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp" />
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bom dia"
+        android:id="@+id/textView3"
+        android:layout_alignStart="@+id/emgDataTextView"
+        android:layout_alignEnd="@+id/btn_emg8"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_below="@+id/menuBtn" />
 
 </RelativeLayout>

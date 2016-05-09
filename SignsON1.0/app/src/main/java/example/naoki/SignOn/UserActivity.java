@@ -71,7 +71,7 @@ public class UserActivity extends Activity {
         }else{
             login.setVisibility(View.INVISIBLE);
             imge.setVisibility(View.INVISIBLE);
-
+            password.setBackgroundResource(R.drawable.senha2);
         }
 
 
