@@ -128,9 +128,11 @@ public class SignalListActivity extends Activity implements AdapterView.OnItemCl
     public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3)
     {
         SignalListView item = adapterListView.getItem(arg2);
-        Intent intent = new Intent(SignalListActivity.this,MyoListActivity.class);
+        Intent intent = new Intent(SignalListActivity.this,MyoActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.putExtra("sinal", item.getTexto());
+        intent.putExtra("img", item.getIconeRid());
+        intent.putExtra("type", "0");
         SignalListActivity.this.startActivity(intent);
     }
 }

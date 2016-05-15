@@ -37,7 +37,7 @@ public class UserActivity extends Activity {
     private EditText login;
     private EditText password;
     private EditText conf;
-    private ImageView imge;
+    private ImageView imge, imgs;
     private TextView status;
     private MenuActivity menui;
     private RequestQueue requestQueue;
@@ -57,6 +57,7 @@ public class UserActivity extends Activity {
         password = (EditText) findViewById(R.id.passEdt);
         conf = (EditText) findViewById(R.id.confEdt);
         imge = (ImageView) findViewById(R.id.emailImg);
+        imgs = (ImageView) findViewById(R.id.senhaImg);
 
         login.setText(getIntent().getStringExtra("login"));
         password.setText(getIntent().getStringExtra("password"));
@@ -71,7 +72,7 @@ public class UserActivity extends Activity {
         }else{
             login.setVisibility(View.INVISIBLE);
             imge.setVisibility(View.INVISIBLE);
-            password.setBackgroundResource(R.drawable.senha2);
+            imgs.setImageResource(R.drawable.senha2);
         }
 
 
@@ -146,7 +147,7 @@ public class UserActivity extends Activity {
                         JSONObject jsonObject = new JSONObject(response);
                         if(jsonObject.names().get(0).equals("success")){
                             Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         }else {
                             Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }
@@ -207,7 +208,8 @@ public class UserActivity extends Activity {
                         JSONObject jsonObject = new JSONObject(response);
                         if(jsonObject.names().get(0).equals("success")){
                             Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            finish();
                         }else {
                             Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }

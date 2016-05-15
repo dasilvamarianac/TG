@@ -125,7 +125,7 @@ public class LoginActivity extends Activity {
                             editor.putString("logado", jsonObject.getString("id"));
                             editor.commit();
 
-                            startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
+                            startActivity(new Intent(getApplicationContext(), SignalListActivity.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Erro" + jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }

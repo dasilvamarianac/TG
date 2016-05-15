@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.thalmic.myo.Myo;
+
 import java.util.ArrayList;
 
 import example.naoki.ble_myo.R;
@@ -70,7 +72,7 @@ public class BluetoothListActivity extends ActionBarActivity implements Bluetoot
                 myoName = item;
 
                 Intent intent;
-                intent = new Intent(getApplicationContext(), SignalActivity.class);
+                intent = new Intent(getApplicationContext(), MyoActivity.class);
 
                 intent.putExtra(TAG, myoName);
 

@@ -1,6 +1,8 @@
 package example.naoki.SignOn;
 
+import android.app.Application;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -16,10 +18,12 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.echo.holographlibrary.LineGraph;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -48,6 +52,9 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private MyoCommandList commandList = new MyoCommandList();
 
     private String deviceName;
+    private String type ;
+    private String img;
+    private String sinal;
 
     private GestureSaveModel saveModel;
     private GestureSaveMethod saveMethod;
@@ -55,6 +62,8 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private GestureDetectMethod detectMethod;
 
     private LineGraph graph;
+    private TextView tTranslate;
+    private ImageView iSignal;
     private Button graphButton1;
     private Button graphButton2;
     private Button graphButton3;
@@ -63,6 +72,10 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private Button graphButton6;
     private Button graphButton7;
     private Button graphButton8;
+    private Button bStopEMG;
+    private Button bEMG;
+    private Button bDetect;
+    private Button bSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +84,12 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
         //ready
         graph = (LineGraph) findViewById(R.id.holo_graph_view);
+        bStopEMG = (Button) findViewById(R.id.bStopEmg);
+        bEMG = (Button) findViewById(R.id.bEMG);
+        bDetect = (Button) findViewById(R.id.bDetect);
+        bSave = (Button) findViewById(R.id.bSave);
+        tTranslate = (TextView) findViewById(R.id.tTranslate);
+
         graphButton1 = (Button) findViewById(R.id.btn_emg1);
         graphButton2 = (Button) findViewById(R.id.btn_emg2);
         graphButton3 = (Button) findViewById(R.id.btn_emg3);
@@ -100,8 +119,14 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         BluetoothManager mBluetoothManager = (BluetoothManager) getSystemService(BLUETOOTH_SERVICE);
         mBluetoothAdapter = mBluetoothManager.getAdapter();
 
-        Intent intent = getIntent();
-        deviceName = intent.getStringExtra(MyoListActivity.TAG);
+        //Intent intent = getIntent();
+        //deviceName = intent.getStringExtra(MyoListActivity.TAG);
+
+
+        SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+        deviceName = prefs.getString("myo", "");
+        Log.i("Myo: ", "[" + deviceName + "]");
+
 
         if (deviceName != null) {
             // Ensures Bluetooth is available on the device and it is enabled. If not,
@@ -129,6 +154,16 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
                 menui.initiatePopupWindow(MyoActivity.this, v);
             }
         });
+
+        graph = (LineGraph) findViewById(R.id.holo_graph_view);
+        bStopEMG = (Button) findViewById(R.id.bStopEmg);
+        bEMG = (Button) findViewById(R.id.bEMG);
+        bDetect = (Button) findViewById(R.id.bDetect);
+        bSave = (Button) findViewById(R.id.bSave);
+        tTranslate = (TextView) findViewById(R.id.tTranslate);
+        iSignal = (ImageView) findViewById(R.id.iSignal);
+
+        Redesign();
     }
 
     @Override
@@ -137,6 +172,96 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         menu.add(0, MENU_LIST, 0, "Find Myo");
         menu.add(0, MENU_BYE, 0, "Good Bye");
         return true;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        Redesign();
+    }
+
+    public void Redesign(){
+        //parameters
+
+        SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+        deviceName = prefs.getString("myo", "");
+        Log.i("Myo: ", "[" + deviceName + "]");
+
+        type = getIntent().getStringExtra("type");
+        img = getIntent().getStringExtra("img");
+        sinal = getIntent().getStringExtra("sinal");
+
+        Log.i("Log - type", type);
+
+        if (type.equals("0")){ // Signal
+
+
+
+            Log.i("Log - type", type);
+            Log.i("Log - img", img);
+            Log.i("Log - sinal", sinal);
+
+
+            bStopEMG.setVisibility(View.INVISIBLE);
+            bDetect.setVisibility(View.INVISIBLE);
+            tTranslate.setVisibility(View.INVISIBLE);
+            iSignal.setVisibility(View.VISIBLE);
+            bSave.setVisibility(View.VISIBLE);
+            bEMG.setVisibility(View.VISIBLE);
+            graph.setVisibility(View.VISIBLE);
+
+            Picasso.with(iSignal.getContext()).load(img).into(iSignal);
+
+        }else{ //Tranlation
+            iSignal.setVisibility(View.INVISIBLE);
+            bSave.setVisibility(View.INVISIBLE);
+            bEMG.setVisibility(View.INVISIBLE);
+            graph.setVisibility(View.INVISIBLE);
+            bStopEMG.setVisibility(View.VISIBLE);
+            bDetect.setVisibility(View.VISIBLE);
+            tTranslate.setVisibility(View.VISIBLE);
+        }
+
+        startNopModel();
+
+        BluetoothManager mBluetoothManager = (BluetoothManager) getSystemService(BLUETOOTH_SERVICE);
+        mBluetoothAdapter = mBluetoothManager.getAdapter();
+
+        //Intent intent = getIntent();
+        //deviceName = intent.getStringExtra(MyoListActivity.TAG);
+
+
+        prefs = getSharedPreferences("signson", MODE_PRIVATE);
+        deviceName = prefs.getString("myo", "");
+        Log.i("Myo: ", "[" + deviceName + "]");
+
+
+        if (deviceName != null) {
+            // Ensures Bluetooth is available on the device and it is enabled. If not,
+            // displays a dialog requesting user permission to enable Bluetooth.
+            if (mBluetoothAdapter == null || !mBluetoothAdapter.isEnabled()) {
+                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            } else {
+                // Scanning Time out by Handler.
+                // The device scanning needs high energy.
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mBluetoothAdapter.stopLeScan(MyoActivity.this);
+                    }
+                }, SCAN_PERIOD);
+                mBluetoothAdapter.startLeScan(this);
+            }
+        }
+
     }
 
     @Override
@@ -239,6 +364,16 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     }
 
     public void onClickDetect(View v) {
+        if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendEmgOnly())) {
+            Log.d(TAG,"False EMG");
+        } else {
+            saveMethod  = new GestureSaveMethod();
+            if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
+                gestureText.setText("DETECT Ready");
+            } else {
+                gestureText.setText("Teach me \'Gesture\'");
+            }
+        }
         if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
             gestureText.setText("Let's Go !!");
             detectMethod = new GestureDetectMethod(saveMethod.getCompareDataList());

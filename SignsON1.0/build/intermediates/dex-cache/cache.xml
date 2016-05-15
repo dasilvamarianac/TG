@@ -2,48 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
-        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-3a497e25da6bebb9aa041f886127c7023945f799.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mariana\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-4a583f809ecd8329612d457851efcccb89887202.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
-        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-d870504a683c069ce4b99b08797ff31a17720b12.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-2bca6c6c77a2da0942dc94cf9349205212e4de6a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mariana\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-49762a31ed54fc07ae1f2287f12d66b0ed3c3244.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-d3e06de2dd76e590ba60a9818f45c60d690e1958.jar" />
-    </item>
-    <item
         jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.echo\holographlibrary\1.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -58,18 +16,25 @@
         <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-4443722ac5e8c814fc8631c9103103b086f6a07c.jar" />
     </item>
     <item
-        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
-        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-e90f083ea2017ae8fde798de20d1516583b7167a.jar" />
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-d870504a683c069ce4b99b08797ff31a17720b12.jar" />
     </item>
     <item
-        jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.echo\holographlibrary\1.0\jars\classes.jar"
+        jar="C:\Users\Mariana\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2940df18c83be014a53f7ab34dd2304c79117c00">
-        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-c67b711fb850e1d69e6fec45429bbefc43b09bb4.jar" />
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-49762a31ed54fc07ae1f2287f12d66b0ed3c3244.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mariana\.gradle\caches\modules-2\files-2.1\com.polysfactory.lib.glass.bluetooth\glass-bluetooth\0.1.2\5fce5af2216670a91e2fb33cf3d643fcfd11ba12\glass-bluetooth-0.1.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5fce5af2216670a91e2fb33cf3d643fcfd11ba12">
+        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\glass-bluetooth-0.1.2-8f1c1dfc2311070f20a357ff3cb4dacc40b05cf7.jar" />
     </item>
     <item
         jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\jars\classes.jar"
@@ -86,11 +51,11 @@
         <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-de80dae57f7c8a345c6c1f9802448856b485754e.jar" />
     </item>
     <item
-        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-4e23404526e6cdd4e9e7a1a2c38953ffe0fd5ac3.jar" />
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-3a497e25da6bebb9aa041f886127c7023945f799.jar" />
     </item>
     <item
         jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\jars\classes.jar"
@@ -100,11 +65,46 @@
         <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-d4dec426a3d5f4ce73e6ae4d085dedc9f9084f31.jar" />
     </item>
     <item
-        jar="C:\Users\Mariana\.gradle\caches\modules-2\files-2.1\com.polysfactory.lib.glass.bluetooth\glass-bluetooth\0.1.2\5fce5af2216670a91e2fb33cf3d643fcfd11ba12\glass-bluetooth-0.1.2.jar"
+        jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="5fce5af2216670a91e2fb33cf3d643fcfd11ba12">
-        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\glass-bluetooth-0.1.2-8f1c1dfc2311070f20a357ff3cb4dacc40b05cf7.jar" />
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-d3e06de2dd76e590ba60a9818f45c60d690e1958.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\exploded-aar\com.echo\holographlibrary\1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2940df18c83be014a53f7ab34dd2304c79117c00">
+        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-c67b711fb850e1d69e6fec45429bbefc43b09bb4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-4e23404526e6cdd4e9e7a1a2c38953ffe0fd5ac3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-2bca6c6c77a2da0942dc94cf9349205212e4de6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mariana\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Mariana\Desktop\SignsOn\SignsON1.0\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-4a583f809ecd8329612d457851efcccb89887202.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\pre-dexed\debug\classes-e90f083ea2017ae8fde798de20d1516583b7167a.jar" />
     </item>
 
 </items>

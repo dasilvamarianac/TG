@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.ParcelUuid;
@@ -72,11 +73,14 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
                 Toast.makeText(getApplicationContext(), item + " connect", Toast.LENGTH_SHORT).show();
                 myoName = item;
 
+
+                SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("myo", myoName);
+                editor.commit();
+
                 Intent intent;
                 intent = new Intent(getApplicationContext(), MyoActivity.class);
-
-                intent.putExtra(TAG, myoName);
-
                 startActivity(intent);
 
             }
@@ -94,10 +98,7 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_list, menu);
         menu.add(0, MENU_SCAN, 0, "Scan");
-
         return true;
     }
 

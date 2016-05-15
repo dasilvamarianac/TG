@@ -47,6 +47,7 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
+                    pwindo.dismiss();
                     Intent intent = new Intent(c, HelpActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     c.startActivity(intent);
@@ -58,6 +59,7 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
+                    pwindo.dismiss();
                     Intent intent = new Intent(c,MyoListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     c.startActivity(intent);
@@ -69,6 +71,7 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
+                    pwindo.dismiss();
                     Intent intent = new Intent(c,SignalListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     c.startActivity(intent);
@@ -80,6 +83,7 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
+                    pwindo.dismiss();
                     Intent intent = new Intent(c, UserActivity.class);
                     intent.putExtra("type", "1");
                     intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -93,17 +97,17 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
+                    pwindo.dismiss();
+                    SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+                    prefs.edit().clear().commit();
 
-                  SharedPreferences prefs = getSharedPreferences("signson", 0);
-                  prefs.edit().clear().commit();
 
-
-                  Intent mStartActivity = new Intent(c, MainActivity.class);
-                  int mPendingIntentId = 123456;
-                  PendingIntent mPendingIntent = PendingIntent.getActivity(c, mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
-                  AlarmManager mgr = (AlarmManager)c.getSystemService(Context.ALARM_SERVICE);
-                  mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
-                  System.exit(0);
+                    Intent mStartActivity = new Intent(c, MainActivity.class);
+                    int mPendingIntentId = 123456;
+                    PendingIntent mPendingIntent = PendingIntent.getActivity(c, mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+                    AlarmManager mgr = (AlarmManager)c.getSystemService(Context.ALARM_SERVICE);
+                    mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+                    System.exit(0);
 
 
                 }

@@ -1459,11 +1459,11 @@ containing a value of this type.
         public static final int holo_graph_view=0x7f0d0058;
         public static final int home=0x7f0d0004;
         public static final int homeAsUp=0x7f0d000d;
+        public static final int iSignal=0x7f0d0063;
         public static final int icon=0x7f0d0026;
         public static final int ifRoom=0x7f0d0018;
         public static final int image=0x7f0d0023;
         public static final int imageView=0x7f0d0048;
-        public static final int imageView2=0x7f0d0063;
         public static final int imageView3=0x7f0d006c;
         public static final int iniciarBtn=0x7f0d0055;
         public static final int listMode=0x7f0d0009;
@@ -1518,9 +1518,9 @@ containing a value of this type.
         public static final int split_action_bar=0x7f0d0007;
         public static final int statusImg=0x7f0d0079;
         public static final int submit_area=0x7f0d003c;
+        public static final int tTranslate=0x7f0d0068;
         public static final int tabMode=0x7f0d000b;
         public static final int textView2=0x7f0d0072;
-        public static final int textView3=0x7f0d0068;
         public static final int title=0x7f0d0027;
         public static final int traducaoTxt=0x7f0d006a;
         public static final int txthelp=0x7f0d006f;

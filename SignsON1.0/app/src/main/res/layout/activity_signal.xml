@@ -129,11 +129,11 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/a"
-        android:id="@+id/imageView2"
+        android:id="@+id/iSignal"
 
         android:layout_above="@+id/holo_graph_view"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
         android:text="Gesture"
         android:id="@+id/gestureTextView"
         android:textSize="25dp"
-        android:layout_below="@+id/imageView2"
+        android:layout_below="@+id/iSignal"
         android:layout_centerHorizontal="true"
         android:visibility="invisible" />
 
@@ -157,7 +157,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/bVibrate"
-            android:nestedScrollingEnabled="false"
+            android:nestedScrollingEnabled="true"
             android:onClick="onClickVibration"
             android:background="@drawable/myo"
             android:layout_alignParentBottom="true"
@@ -172,10 +172,9 @@
             android:onClick="onClickNoEMG"
             android:visibility="visible"
             android:background="@drawable/pausar"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/bSave"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/bSave" />
 
         <Button
             android:layout_width="50dp"
@@ -183,18 +182,17 @@
             android:id="@+id/bEMG"
             android:onClick="onClickEMG"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/bVibrate"
             android:visibility="visible"
-            android:background="@drawable/iniciar" />
+            android:background="@drawable/sinais"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/bDetect" />
 
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/bDetect"
             android:onClick="onClickDetect"
-            android:background="@drawable/sinais"
+            android:background="@drawable/iniciar"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:visibility="visible"
@@ -218,10 +216,13 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Bom dia"
-        android:id="@+id/textView3"
+        android:id="@+id/tTranslate"
         android:layout_alignStart="@+id/emgDataTextView"
-        android:layout_alignEnd="@+id/btn_emg8"
         android:layout_above="@+id/relativeLayout"
-        android:layout_below="@+id/menuBtn" />
+        android:layout_below="@+id/menuBtn"
+        android:visibility="visible"
+        android:layout_toStartOf="@+id/menuBtn"
+        android:layout_alignEnd="@+id/emgDataTextView"
+        android:background="@android:drawable/editbox_dropdown_light_frame" />
 
 </RelativeLayout>

@@ -27,20 +27,38 @@ public class MainActivity extends ActionBarActivity {
 
             public void run() {
 
-                SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
-                String jaLogou = prefs.getString("logado", "x");
-                Log.i("Login", "[" + jaLogou + "]");
-
-                if (jaLogou.equals("x")) {
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                } else {
-                    startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
-                }
+               Login();
 
             }
 
         }, 3000);
 
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        Login();
+    }
+
+    protected void Login (){
+        SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+        String jaLogou = prefs.getString("logado", "x");
+        Log.i("Login", "[" + jaLogou + "]");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("myo", "NONMYO");
+        editor.commit();
+
+        if (jaLogou.equals("x")) {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        } else {
+            Intent intent;
+            intent = new Intent(getApplicationContext(), MyoActivity.class);
+            intent.putExtra("type", "1");
+            startActivity(intent);
+        }
     }
 
 }

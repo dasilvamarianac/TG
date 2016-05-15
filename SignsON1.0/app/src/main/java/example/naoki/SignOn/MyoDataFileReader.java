@@ -1,5 +1,7 @@
 package example.naoki.SignOn;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,9 +9,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-/**
+/*
  * Created by naoki on 15/04/09.
  */
+
 public class MyoDataFileReader {
     private static File BASE_DIR = new File("sdcard");
     public static void init(File base){
@@ -52,6 +55,7 @@ public class MyoDataFileReader {
             writer = new PrintWriter(targetFile);
             for(EmgData myoData : myoDataList){
                 writer.println(myoData.getLine());
+                Log.i("GESTO FILE", myoData.getLine());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,7 +84,7 @@ public class MyoDataFileReader {
                 line = line.trim();
                 EmgData data = new EmgData();
                 data.setLine(line);
-
+                Log.i("GESTO LOAD", line);
                 dataList.add(data);
             }
             br.close();

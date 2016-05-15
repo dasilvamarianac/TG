@@ -50,7 +50,6 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
 
     private MyoGattCallback mMyoCallback;
     private MyoCommandList commandList = new MyoCommandList();
-    private AppPrefs mPrefs;
     private String deviceName;
     private GestureSaveModel    saveModel;
     private GestureSaveMethod   saveMethod;
@@ -66,7 +65,6 @@ public class SignalActivity extends MyoActivity implements BluetoothAdapter.LeSc
         setContentView(R.layout.activity_signal);
         graph = (LineGraph) findViewById(R.id.holo_graph_view);
         text = (TextView) findViewById(R.id.gestureTextView);
-        mPrefs = new AppPrefs(this);
         emgDataText = (TextView)findViewById(R.id.emgDataTextView);
         gestureText = (TextView)findViewById(R.id.gestureTextView);
         mHandler = new Handler();

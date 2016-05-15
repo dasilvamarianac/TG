@@ -56,7 +56,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:id="@+id/senhaImg"
-        android:src="@drawable/senha2"
+        android:src="@drawable/senha"
         android:layout_below="@+id/loginEdt"
         android:layout_alignStart="@+id/emailImg" />
 
