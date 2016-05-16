@@ -1,8 +1,29 @@
 package example.naoki.SignOn;
 
+import android.app.Application;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import example.naoki.ble_myo.R;
 
 /**
  * Created by naoki on 15/04/17.
@@ -11,7 +32,7 @@ public class GestureSaveMethod {
     private final static String TAG = "SignsOn";
     private final static String FileName = "userdata.dat";
 
-    private final static int COMPARE_NUM = 3;
+    private final static int COMPARE_NUM = 2;
     private final static int SAVE_DATA_LENGTH = 5;
     private final static int AVERAGING_LENGTH = 10;
 
@@ -23,6 +44,13 @@ public class GestureSaveMethod {
 
     private int dataCounter = 0;
     private int gestureCounter = 0;
+
+    private RequestQueue requestQueue;
+    private ArrayList<String> items = new ArrayList<>();
+    private static final String URLL = "http://signson.orgfree.com/php/listug.php";
+    private static final String URL = "http://signson.orgfree.com/php/novoS.php";
+    private StringRequest request;
+    private String signal;
 
     public GestureSaveMethod() {
         MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
@@ -39,7 +67,8 @@ public class GestureSaveMethod {
         Have_Saved,
     }
 
-    public void addData(byte[] data) {
+    public void addData(byte[] data, String sinal) {
+        signal = sinal;
         rawDataList.add(new EmgCharacteristicData(data));
         dataCounter++;
         if (dataCounter % SAVE_DATA_LENGTH == 0) {
@@ -77,6 +106,8 @@ public class GestureSaveMethod {
         if (gestureCounter == COMPARE_NUM) {
             saveState = SaveState.Have_Saved;
             gestureCounter = 0;
+            //--Mariana, Metodo com select para encontrar as linhas
+            Listug();
             MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
             dataFileReader.saveMAX(getCompareDataList());
         }
@@ -94,7 +125,6 @@ public class GestureSaveMethod {
                 for (int i_element = 0; i_element < 8; i_element++) {
                     if (emg8Temp.getElement(i_element) > tempData.getElement(i_element)) {
                         tempData.setElement(i_element, emg8Temp.getElement(i_element));
-                        Log.e("GESTO SAVE", tempData.getLine());
                     }
                 }
             }
@@ -104,7 +134,10 @@ public class GestureSaveMethod {
         if (maxDataList.size() < AVERAGING_LENGTH) {
             Log.e("GestureDetect", "Small aveData : " + maxDataList.size());
         }
-        compareGesture.add(tempData);
+        //compareGesture.add(tempData);
+        Log.e("GESTO SAVE", tempData.getLine());
+        InsertData(tempData, signal);
+        Log.e("GESTO SAVE POS", tempData.getLine());
         maxDataList = new ArrayList<>();
     }
 
@@ -122,6 +155,103 @@ public class GestureSaveMethod {
 
     public ArrayList<EmgData> getCompareDataList() {
         return compareGesture;
+    }
+
+    private void Listug(){
+        SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
+        final String user = prefs.getString("logado", "x");
+
+        final EmgData tempData  = new EmgData();
+
+        requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
+        request = new StringRequest(Request.Method.POST, URLL, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                try {
+                    String line;
+                    JSONArray array = new JSONArray(response);
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject row = array.getJSONObject(i);
+                        line = row.getString("line");
+                        Log.i("LINHA",line);
+                        items.add(line);
+                        tempData.setLine(line);
+                        compareGesture.add(tempData);
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MyoActivity.getContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("id", user);
+                return hashMap;
+            }
+        };
+        requestQueue.add(request);
+    }
+
+    public void InsertData(EmgData temp, final String sinal) {
+        final EmgData tempData = temp;
+        SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
+        final String user = prefs.getString("logado", "");
+        Log.e("GESTO INSERT", tempData.getLine());
+        Log.e("SINAL INSERT", sinal);
+        Log.e("USER INSERT", user);
+
+        requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
+        request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.e("JSON RESP", response);
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    if(jsonObject.names().get(0).equals("success")){
+
+                    }else {
+                        Toast.makeText(MyoActivity.getContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MyoActivity.getContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+            }
+
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String> hashMap = new HashMap<String, String>();
+                hashMap.put("user",user);
+                hashMap.put("gesture",sinal);
+                hashMap.put("sensor1",tempData.getElement(0).toString()+"00000");
+                hashMap.put("sensor2",tempData.getElement(1).toString()+"00000");
+                hashMap.put("sensor3",tempData.getElement(2).toString()+"00000");
+                hashMap.put("sensor4",tempData.getElement(3).toString()+"00000");
+                hashMap.put("sensor5",tempData.getElement(4).toString()+"00000");
+                hashMap.put("sensor6",tempData.getElement(5).toString()+"00000");
+                hashMap.put("sensor7",tempData.getElement(6).toString()+"00000");
+                hashMap.put("sensor8",tempData.getElement(7).toString()+"00000");
+
+                return hashMap;
+            }
+        };
+        requestQueue.add(request);
+
     }
 
 }

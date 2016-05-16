@@ -10,15 +10,17 @@ public class GestureSaveModel implements IGestureDetectModel{
     private IGestureDetectAction action;
 
     private GestureSaveMethod saveMethod;
+    private String signal;
 
-    public GestureSaveModel(GestureSaveMethod method) {
+    public GestureSaveModel(GestureSaveMethod method, String sinal) {
         saveMethod = method;
+        signal = sinal;
     }
 
     @Override
     public void event(long time, byte[] data) {
         synchronized (LOCK) {
-            saveMethod.addData(data);
+            saveMethod.addData(data, signal);
 
             if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Not_Saved) {
                 action("SAVE");

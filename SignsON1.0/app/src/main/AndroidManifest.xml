@@ -23,7 +23,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        tools:replace="android:icon">
+        tools:replace="android:icon"
+        >
 
         <activity
             android:name="example.naoki.SignOn.MyoListActivity"
@@ -56,10 +57,6 @@
         <activity
             android:name="example.naoki.SignOn.TranslateActivity"
             android:label="@string/title_activity_translate"/>
-        <activity
-            android:name="example.naoki.SignOn.SignalActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
         <activity
             android:name="example.naoki.SignOn.MyoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

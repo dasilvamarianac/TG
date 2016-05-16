@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class GestureDetectMethod {
     private final static int COMPARE_NUM = 3;
     private final static int STREAM_DATA_LENGTH = 5;
-    private final static Double THRESHOLD = 0.01;
+    private final static Double THRESHOLD = 0.09;
 
     private final ArrayList<EmgData> compareGesture;
 
@@ -96,6 +96,8 @@ public class GestureDetectMethod {
         double distance    = streamData.getDistanceFrom(compareData);
         return (Math.pow(streamNorm,2.0)+Math.pow(compareNorm,2.0)-Math.pow(distance,2.0))/streamNorm/compareNorm/2;
     }
+
+
 
 
 }

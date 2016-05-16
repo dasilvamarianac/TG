@@ -212,7 +212,7 @@ public class TranslateActivity extends MyoActivity implements BluetoothAdapter.L
     public void onClickSave(View v) {
         if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Ready ||
                 saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
-            saveModel   = new GestureSaveModel(saveMethod);
+            saveModel   = new GestureSaveModel(saveMethod, sinal);
             startSaveModel();
         } else if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Not_Saved) {
             startSaveModel();

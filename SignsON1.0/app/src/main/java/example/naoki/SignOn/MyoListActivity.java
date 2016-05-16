@@ -32,7 +32,7 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
     public static String TAG = "BluetoothList";
 
     /** Device Scanning Time (ms) */
-    private static final long SCAN_PERIOD = 5000;
+    private static final long SCAN_PERIOD = 2000;
 
     /** Intent code for requesting Bluetooth enable */
     private static final int REQUEST_ENABLE_BT = 1;

@@ -1,6 +1,7 @@
 package example.naoki.SignOn;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -22,10 +23,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.echo.holographlibrary.LineGraph;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import example.naoki.ble_myo.R;
 
@@ -54,7 +68,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private String deviceName;
     private String type ;
     private String img;
-    private String sinal;
+    public String sinal;
 
     private GestureSaveModel saveModel;
     private GestureSaveMethod saveMethod;
@@ -76,11 +90,13 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private Button bEMG;
     private Button bDetect;
     private Button bSave;
+    private static Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signal);
+        mContext = getApplicationContext();
 
         //ready
         graph = (LineGraph) findViewById(R.id.holo_graph_view);
@@ -166,6 +182,10 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         Redesign();
     }
 
+    public static Context getContext() {
+        return mContext;
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -219,7 +239,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
             Picasso.with(iSignal.getContext()).load(img).into(iSignal);
 
-        }else{ //Tranlation
+        }else{ //Translation
             iSignal.setVisibility(View.INVISIBLE);
             bSave.setVisibility(View.INVISIBLE);
             bEMG.setVisibility(View.INVISIBLE);
@@ -233,10 +253,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
         BluetoothManager mBluetoothManager = (BluetoothManager) getSystemService(BLUETOOTH_SERVICE);
         mBluetoothAdapter = mBluetoothManager.getAdapter();
-
-        //Intent intent = getIntent();
-        //deviceName = intent.getStringExtra(MyoListActivity.TAG);
-
 
         prefs = getSharedPreferences("signson", MODE_PRIVATE);
         deviceName = prefs.getString("myo", "");
@@ -324,12 +340,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         }
     }
 
-    public void onClickUnlock(View v) {
-        if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendUnLock())) {
-            Log.d(TAG,"False UnLock");
-        }
-    }
-
     public void onClickEMG(View v) {
         if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendEmgOnly())) {
             Log.d(TAG,"False EMG");
@@ -352,20 +362,25 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     }
 
     public void onClickSave(View v) {
+
         if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Ready ||
                 saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
-            saveModel   = new GestureSaveModel(saveMethod);
+            saveModel   = new GestureSaveModel(saveMethod, sinal);
             startSaveModel();
         } else if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Not_Saved) {
             startSaveModel();
         }
+
         saveMethod.setState(GestureSaveMethod.SaveState.Now_Saving);
         gestureText.setText("Saving ; " + (saveMethod.getGestureCounter() + 1));
+
+
+
     }
 
     public void onClickDetect(View v) {
         if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendEmgOnly())) {
-            Log.d(TAG,"False EMG");
+            Log.d(TAG, "False EMG");
         } else {
             saveMethod  = new GestureSaveMethod();
             if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
@@ -429,5 +444,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
             mBluetoothAdapter.startLeScan(this);
         }
     }
+
+
 }
 
