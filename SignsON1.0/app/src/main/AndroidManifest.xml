@@ -55,9 +55,6 @@
             android:label="@string/title_activity_signal_list" >
         </activity>
         <activity
-            android:name="example.naoki.SignOn.TranslateActivity"
-            android:label="@string/title_activity_translate"/>
-        <activity
             android:name="example.naoki.SignOn.MyoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 

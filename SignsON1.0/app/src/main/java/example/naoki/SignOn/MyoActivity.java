@@ -92,6 +92,10 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private Button bSave;
     private static Context mContext;
 
+    private RequestQueue requestQueue;
+    private static final String URL = "http://signson.orgfree.com/php/next.php";
+    private StringRequest request;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -238,6 +242,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
             graph.setVisibility(View.VISIBLE);
 
             Picasso.with(iSignal.getContext()).load(img).into(iSignal);
+            iSignal.setId(Integer.valueOf(sinal));
 
         }else{ //Translation
             iSignal.setVisibility(View.INVISIBLE);
@@ -362,17 +367,26 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     }
 
     public void onClickSave(View v) {
-
+        saveMethod.setSignal(Integer.toString(iSignal.getId()));
         if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Ready ||
                 saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
-            saveModel   = new GestureSaveModel(saveMethod, sinal);
+
+            saveModel   = new GestureSaveModel(saveMethod);
             startSaveModel();
+
+
         } else if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Not_Saved) {
             startSaveModel();
         }
 
         saveMethod.setState(GestureSaveMethod.SaveState.Now_Saving);
         gestureText.setText("Saving ; " + (saveMethod.getGestureCounter() + 1));
+        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
+        Next();
+        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
+        saveMethod.setSignal(Integer.toString(iSignal.getId()));
+        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
+
 
 
 
@@ -445,6 +459,44 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         }
     }
 
+    private void Next(){
+        SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
+        final String user = prefs.getString("logado", "x");
+
+        requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
+        request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.e("JSON RESP NEXT", response);
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    if(jsonObject.getString("symbol").equals("completed")){
+                        startActivity(new Intent (MyoActivity.getContext(),SignalListActivity.class));
+                    }else{
+                        iSignal.setId(Integer.valueOf(jsonObject.getString("idgesture")));
+                        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
+                        String image = jsonObject.getString("image");
+                        Picasso.with(iSignal.getContext()).load(image).into(iSignal);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MyoActivity.getContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("user", user);
+                return hashMap;
+            }
+        };
+        requestQueue.add(request);
+    }
 
 }
 

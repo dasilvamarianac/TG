@@ -46,7 +46,28 @@ public class MyoDataFileReader {
         }
     }
 
+    public void saveMAXE(ArrayList<EmgData> myoDataList) {
+        File targetFile = getMyoDataFile();
+        targetFile.getParentFile().mkdirs();
+
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter(targetFile);
+            for(EmgData myoData : myoDataList){
+                writer.println(myoData.getLine());
+                Log.i("GESTO FILE", myoData.getLine());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if(writer != null){
+                writer.close();
+            }
+        }
+    }
+
     public void saveMAX(ArrayList<EmgData> myoDataList) {
+        Log.i("FILE","Entrou");
         File targetFile = getMyoDataFile();
         targetFile.getParentFile().mkdirs();
 

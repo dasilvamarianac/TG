@@ -46,9 +46,9 @@ public class GestureSaveMethod {
     private int gestureCounter = 0;
 
     private RequestQueue requestQueue;
-    private ArrayList<String> items = new ArrayList<>();
     private static final String URLL = "http://signson.orgfree.com/php/listug.php";
     private static final String URL = "http://signson.orgfree.com/php/novoS.php";
+    private static final String URLC = "http://signson.orgfree.com/php/completed.php";
     private StringRequest request;
     private String signal;
 
@@ -67,8 +67,7 @@ public class GestureSaveMethod {
         Have_Saved,
     }
 
-    public void addData(byte[] data, String sinal) {
-        signal = sinal;
+    public void addData(byte[] data) {
         rawDataList.add(new EmgCharacteristicData(data));
         dataCounter++;
         if (dataCounter % SAVE_DATA_LENGTH == 0) {
@@ -96,22 +95,12 @@ public class GestureSaveMethod {
         if (dataCounter == SAVE_DATA_LENGTH * AVERAGING_LENGTH) {
             saveState = SaveState.Not_Saved;
             makeCompareData();
-            gestureCount();
+            Completed();
             dataCounter = 0;
         }
     }
 
-    private void gestureCount() {
-        gestureCounter++;
-        if (gestureCounter == COMPARE_NUM) {
-            saveState = SaveState.Have_Saved;
-            gestureCounter = 0;
-            //--Mariana, Metodo com select para encontrar as linhas
-            Listug();
-            MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
-            dataFileReader.saveMAX(getCompareDataList());
-        }
-    }
+
 
     private void makeCompareData() {
         EmgData tempData  = new EmgData();
@@ -141,47 +130,39 @@ public class GestureSaveMethod {
         maxDataList = new ArrayList<>();
     }
 
-    public SaveState getSaveState() {
-        return saveState;
-    }
 
-    public void setState(SaveState state) {
-        saveState = state;
-    }
-
-    public int getGestureCounter() {
-        return gestureCounter;
-    }
-
-    public ArrayList<EmgData> getCompareDataList() {
-        return compareGesture;
-    }
 
     private void Listug(){
         SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
         final String user = prefs.getString("logado", "x");
-
-        final EmgData tempData  = new EmgData();
-
         requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
         request = new StringRequest(Request.Method.POST, URLL, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
+                Log.e("JSON RESP LIST", response);
                 try {
                     String line;
                     JSONArray array = new JSONArray(response);
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject row = array.getJSONObject(i);
                         line = row.getString("line");
-                        Log.i("LINHA",line);
-                        items.add(line);
+                        EmgData tempData  = new EmgData();
                         tempData.setLine(line);
                         compareGesture.add(tempData);
+                        compareGesture.get(i).setLine(line);
+                        Log.i("LINHA", compareGesture.get(i).getLine());
                     }
+                    for (int i = 0; i < array.length(); i++) {
+                        Log.i("LINHA", compareGesture.get(i).getLine());
+                    }
+                    MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG, FileName);
+                    dataFileReader.saveMAX(getCompareDataList());
+                    compareGesture = new ArrayList<>();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Log.e("JSON RESP LIST", "Entrou Listed4");
                 }
             }
         }, new Response.ErrorListener() {
@@ -192,11 +173,12 @@ public class GestureSaveMethod {
         }){
             protected Map<String, String> getParams() throws AuthFailureError {
                 HashMap<String, String> hashMap = new HashMap<>();
-                hashMap.put("id", user);
+                hashMap.put("user", user);
                 return hashMap;
             }
         };
         requestQueue.add(request);
+
     }
 
     public void InsertData(EmgData temp, final String sinal) {
@@ -212,7 +194,7 @@ public class GestureSaveMethod {
 
             @Override
             public void onResponse(String response) {
-                Log.e("JSON RESP", response);
+                Log.e("JSON RESP INS", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.names().get(0).equals("success")){
@@ -253,5 +235,63 @@ public class GestureSaveMethod {
         requestQueue.add(request);
 
     }
+    private void Completed(){
+        SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
+        final String user = prefs.getString("logado", "x");
+
+
+        requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
+        request = new StringRequest(Request.Method.POST, URLC, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.e("JSON RESP COMP", response);
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    if(jsonObject.names().get(0).equals("completed")){
+                        Log.e("JSON RESP COMP", "Entrou Completed");
+                        saveState = SaveState.Have_Saved;
+                        Listug();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MyoActivity.getContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("user", user);
+                return hashMap;
+            }
+        };
+        requestQueue.add(request);
+    }
+    public SaveState getSaveState() {
+        return saveState;
+    }
+
+    public void setState(SaveState state) {
+        saveState = state;
+    }
+
+    public int getGestureCounter() {
+        return gestureCounter;
+    }
+
+    public ArrayList<EmgData> getCompareDataList() {
+        return compareGesture;
+    }
+
+    public void setSignal(String s) {
+        signal = s ;
+    }
+
+
 
 }
