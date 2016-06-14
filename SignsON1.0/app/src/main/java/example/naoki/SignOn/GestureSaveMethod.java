@@ -32,8 +32,7 @@ public class GestureSaveMethod {
     private final static String TAG = "SignsOn";
     private final static String FileName = "userdata.dat";
 
-    private final static int COMPARE_NUM = 2;
-    private final static int SAVE_DATA_LENGTH = 5;
+    private final static int SAVE_DATA_LENGTH = 3;
     private final static int AVERAGING_LENGTH = 10;
 
     private ArrayList<EmgCharacteristicData> rawDataList = new ArrayList<>();
@@ -51,6 +50,14 @@ public class GestureSaveMethod {
     private static final String URLC = "http://signson.orgfree.com/php/completed.php";
     private StringRequest request;
     private String signal;
+
+    public void Charge() {
+        MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
+        compareGesture = dataFileReader.load();
+        saveState = SaveState.Have_Saved;
+        Log.e("CHAGE", "Entrou");
+    }
+
 
     public GestureSaveMethod() {
         MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
@@ -123,7 +130,6 @@ public class GestureSaveMethod {
         if (maxDataList.size() < AVERAGING_LENGTH) {
             Log.e("GestureDetect", "Small aveData : " + maxDataList.size());
         }
-        //compareGesture.add(tempData);
         Log.e("GESTO SAVE", tempData.getLine());
         InsertData(tempData, signal);
         Log.e("GESTO SAVE POS", tempData.getLine());
@@ -132,12 +138,12 @@ public class GestureSaveMethod {
 
 
 
-    private void Listug(){
+    public void Listug(){
         SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
         final String user = prefs.getString("logado", "x");
         requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
+        compareGesture = new ArrayList<>();
         request = new StringRequest(Request.Method.POST, URLL, new Response.Listener<String>() {
-
             @Override
             public void onResponse(String response) {
                 Log.e("JSON RESP LIST", response);
@@ -158,7 +164,7 @@ public class GestureSaveMethod {
                     }
                     MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG, FileName);
                     dataFileReader.saveMAX(getCompareDataList());
-                    compareGesture = new ArrayList<>();
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

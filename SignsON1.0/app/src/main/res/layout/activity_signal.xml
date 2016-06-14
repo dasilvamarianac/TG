@@ -128,22 +128,12 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/a"
+        android:background="#8b8b8b"
         android:id="@+id/iSignal"
-
+        android:padding="1dp"
         android:layout_above="@+id/holo_graph_view"
         android:layout_centerHorizontal="true"
         android:visibility="visible" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gesture"
-        android:id="@+id/gestureTextView"
-        android:textSize="25dp"
-        android:layout_below="@+id/iSignal"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
 
     <RelativeLayout
         android:orientation="horizontal"
@@ -224,5 +214,15 @@
         android:layout_toStartOf="@+id/menuBtn"
         android:layout_alignEnd="@+id/emgDataTextView"
         android:background="@android:drawable/editbox_dropdown_light_frame" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gesture"
+        android:id="@+id/gestureTextView"
+        android:textSize="25dp"
+        android:layout_below="@+id/iSignal"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
 </RelativeLayout>

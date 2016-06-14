@@ -239,7 +239,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
             iSignal.setVisibility(View.VISIBLE);
             bSave.setVisibility(View.VISIBLE);
             bEMG.setVisibility(View.VISIBLE);
-            graph.setVisibility(View.VISIBLE);
 
             Picasso.with(iSignal.getContext()).load(img).into(iSignal);
             iSignal.setId(Integer.valueOf(sinal));
@@ -248,7 +247,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
             iSignal.setVisibility(View.INVISIBLE);
             bSave.setVisibility(View.INVISIBLE);
             bEMG.setVisibility(View.INVISIBLE);
-            graph.setVisibility(View.INVISIBLE);
             bStopEMG.setVisibility(View.VISIBLE);
             bDetect.setVisibility(View.VISIBLE);
             tTranslate.setVisibility(View.VISIBLE);
@@ -289,6 +287,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     public void onStop(){
         super.onStop();
         this.closeBLEGatt();
+        tTranslate.setText("");
     }
 
     @Override
@@ -386,24 +385,15 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
         saveMethod.setSignal(Integer.toString(iSignal.getId()));
         Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
-
-
-
-
     }
 
     public void onClickDetect(View v) {
         if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendEmgOnly())) {
-            Log.d(TAG, "False EMG");
+            Log.d(TAG,"False EMG");
         } else {
+            tTranslate.setText("");
             saveMethod  = new GestureSaveMethod();
-            if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
-                gestureText.setText("DETECT Ready");
-            } else {
-                gestureText.setText("Teach me \'Gesture\'");
-            }
-        }
-        if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
+            saveMethod.Charge();
             gestureText.setText("Let's Go !!");
             detectMethod = new GestureDetectMethod(saveMethod.getCompareDataList());
             detectModel = new GestureDetectModel(detectMethod);
@@ -440,7 +430,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                gestureText.setText(message);
+                tTranslate.setText(tTranslate.getText()+message);
             }
         });
     }

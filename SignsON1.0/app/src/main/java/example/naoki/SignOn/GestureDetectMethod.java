@@ -1,6 +1,7 @@
 package example.naoki.SignOn;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by naoki on 15/04/17.
@@ -8,9 +9,10 @@ import java.util.ArrayList;
 public class GestureDetectMethod {
     private final static int COMPARE_NUM = 3;
     private final static int STREAM_DATA_LENGTH = 5;
-    private final static Double THRESHOLD = 0.09;
+    private final static Double THRESHOLD = 0.03;
 
     private final ArrayList<EmgData> compareGesture;
+    private final String[] letter = new String[]{"a","b","c"};
 
     private int streamCount = 0;
     private EmgData streamingMaxData;
@@ -23,27 +25,16 @@ public class GestureDetectMethod {
         compareGesture = gesture;
     }
 
-    public enum GestureState {
-        No_Gesture,
-        Gesture_1,
-        Gesture_2,
-        Gesture_3
-    }
-
-    private GestureState getEnum(int i_gesture) {
-        switch (i_gesture) {
-            case 0:
-                return GestureState.Gesture_1;
-            case 1:
-                return GestureState.Gesture_2;
-            case 2:
-                return GestureState.Gesture_3;
-            default:
-                return GestureState.No_Gesture;
+    private String getEnum(int i_gesture) {
+        for(int i = 0 ; i <= COMPARE_NUM; i++ ){
+            if (i_gesture == i){
+                    return letter[i_gesture];
+            }
         }
+        return("");
     }
 
-    public GestureState getDetectGesture(byte[] data) {
+    public String getDetectGesture(byte[] data) {
         EmgData streamData = new EmgData(new EmgCharacteristicData(data));
         streamCount++;
         if (streamCount == 1){

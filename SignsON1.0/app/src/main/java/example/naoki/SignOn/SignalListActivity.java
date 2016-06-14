@@ -6,6 +6,7 @@ package example.naoki.SignOn;
         import android.graphics.Color;
         import android.os.Bundle;
         import android.os.StrictMode;
+        import android.util.Log;
         import android.view.View;
         import android.widget.AdapterView;
         import android.widget.Button;
@@ -77,11 +78,13 @@ public class SignalListActivity extends Activity implements AdapterView.OnItemCl
 
             @Override
             public void onResponse(String response) {
+                Log.i("JASON SINAIS", response);
                 try {
                     String id;
                     String image;
                     String status;
                     SignalListView item;
+
                     JSONArray array = new JSONArray(response);
                     itens = new ArrayList<>();
                     for (int i = 0; i < array.length(); i++) {
@@ -107,6 +110,7 @@ public class SignalListActivity extends Activity implements AdapterView.OnItemCl
                     listView.setCacheColorHint(Color.TRANSPARENT);
 
                 } catch (JSONException e) {
+                    Log.i("JASON SINAIS", response);
                     e.printStackTrace();
                 }
             }

@@ -6,7 +6,6 @@ package example.naoki.SignOn;
 public class GestureDetectModel implements IGestureDetectModel{
     private final static Object LOCK = new Object();
 
-    private String name = "";
     private IGestureDetectAction action;
     private GestureDetectMethod detectMethod;
 
@@ -17,8 +16,8 @@ public class GestureDetectModel implements IGestureDetectModel{
     @Override
     public void event(long time, byte[] data) {
         synchronized (LOCK) {
-            GestureDetectMethod.GestureState gestureState = detectMethod.getDetectGesture(data);
-            action(gestureState.name());
+            String gestureState = detectMethod.getDetectGesture(data);
+            action(gestureState);
         }
     }
 
