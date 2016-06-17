@@ -147,7 +147,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         deviceName = prefs.getString("myo", "");
         Log.i("Myo: ", "[" + deviceName + "]");
 
-
         if (deviceName != null) {
             // Ensures Bluetooth is available on the device and it is enabled. If not,
             // displays a dialog requesting user permission to enable Bluetooth.
@@ -430,7 +429,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                tTranslate.setText(tTranslate.getText()+message);
+                tTranslate.setText(message);
             }
         });
     }
@@ -476,7 +475,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MyoActivity.getContext(), "Erro de conex„o " + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyoActivity.getContext(), "Erro de conex√£o " + error, Toast.LENGTH_SHORT).show();
             }
         }){
             protected Map<String, String> getParams() throws AuthFailureError {

@@ -123,9 +123,12 @@ public class LoginActivity extends Activity {
                             SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putString("logado", jsonObject.getString("id"));
+                            editor.putString("status", jsonObject.getString("status"));
                             editor.commit();
 
-                            startActivity(new Intent(getApplicationContext(), SignalListActivity.class));
+
+
+                            startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "Erro" + jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                         }

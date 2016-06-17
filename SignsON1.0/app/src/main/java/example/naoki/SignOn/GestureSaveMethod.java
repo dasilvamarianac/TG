@@ -55,9 +55,8 @@ public class GestureSaveMethod {
         MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
         compareGesture = dataFileReader.load();
         saveState = SaveState.Have_Saved;
-        Log.e("CHAGE", "Entrou");
+        Log.e("CHARGE", "Entrou");
     }
-
 
     public GestureSaveMethod() {
         MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
@@ -174,7 +173,7 @@ public class GestureSaveMethod {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MyoActivity.getContext(), "Erro de conex„o " + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyoActivity.getContext(), "Erro de conex√£o " + error, Toast.LENGTH_SHORT).show();
             }
         }){
             protected Map<String, String> getParams() throws AuthFailureError {
@@ -217,7 +216,7 @@ public class GestureSaveMethod {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MyoActivity.getContext(), "Erro de conex„o " + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyoActivity.getContext(), "Erro de conex√£o " + error, Toast.LENGTH_SHORT).show();
             }
 
         }){
@@ -241,7 +240,7 @@ public class GestureSaveMethod {
         requestQueue.add(request);
 
     }
-    private void Completed(){
+    public void Completed(){
         SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
         final String user = prefs.getString("logado", "x");
 
@@ -267,7 +266,7 @@ public class GestureSaveMethod {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(MyoActivity.getContext(), "Erro de conex„o " + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyoActivity.getContext(), "Erro de conex√£o " + error, Toast.LENGTH_SHORT).show();
             }
         }){
             protected Map<String, String> getParams() throws AuthFailureError {

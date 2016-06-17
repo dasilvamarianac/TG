@@ -45,7 +45,9 @@ public class MainActivity extends ActionBarActivity {
     protected void Login (){
         SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
         String jaLogou = prefs.getString("logado", "x");
+        String status = prefs.getString("status", "x");
         Log.i("Login", "[" + jaLogou + "]");
+        Log.i("Status", "[" + status + "]");
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("myo", "NONMYO");
@@ -55,8 +57,7 @@ public class MainActivity extends ActionBarActivity {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         } else {
             Intent intent;
-            intent = new Intent(getApplicationContext(), MyoActivity.class);
-            intent.putExtra("type", "1");
+            intent = new Intent(getApplicationContext(), MyoListActivity.class);
             startActivity(intent);
         }
     }

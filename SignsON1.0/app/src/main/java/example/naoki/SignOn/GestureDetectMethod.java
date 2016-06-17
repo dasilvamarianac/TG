@@ -7,31 +7,33 @@ import java.util.List;
  * Created by naoki on 15/04/17.
  */
 public class GestureDetectMethod {
-    private final static int COMPARE_NUM = 3;
     private final static int STREAM_DATA_LENGTH = 5;
-    private final static Double THRESHOLD = 0.03;
+    private final static Double THRESHOLD = 0.01;
 
     private final ArrayList<EmgData> compareGesture;
-    private final String[] letter = new String[]{"a","b","c"};
+    private final String[] letter = new String[]{"a","b","c","d","e"};
 
     private int streamCount = 0;
     private EmgData streamingMaxData;
     private Double detect_distance;
     private int detect_Num;
+    private int comp;
 
     private NumberSmoother numberSmoother = new NumberSmoother();
 
     public GestureDetectMethod(ArrayList<EmgData> gesture) {
+
         compareGesture = gesture;
+        comp = compareGesture.size();
     }
 
     private String getEnum(int i_gesture) {
-        for(int i = 0 ; i <= COMPARE_NUM; i++ ){
+        for(int i = 0 ; i <= comp; i++ ){
             if (i_gesture == i){
-                    return letter[i_gesture];
+                return letter[i_gesture];
             }
         }
-        return("");
+        return("none");
     }
 
     public String getDetectGesture(byte[] data) {
@@ -48,7 +50,7 @@ public class GestureDetectMethod {
             if (streamCount == STREAM_DATA_LENGTH){
                 detect_distance = getThreshold();
                 detect_Num = -1;
-                for (int i_gesture = 0;i_gesture < COMPARE_NUM ;i_gesture++) {
+                for (int i_gesture = 0;i_gesture < comp ;i_gesture++) {
                     EmgData compData = compareGesture.get(i_gesture);
                     double distance = distanceCalculation(streamingMaxData, compData);
                     if (detect_distance > distance) {
@@ -60,12 +62,11 @@ public class GestureDetectMethod {
                 streamCount = 0;
             }
         }
-        return getEnum(numberSmoother.getSmoothingNumber());
+        return getEnum(numberSmoother.getSmoothingNumber(comp));
     }
 
     private double getThreshold() {
         return THRESHOLD;
-//        return 0.9;
     }
 
 	// 2 vectors distance devied from each vectors norm.

@@ -42,6 +42,7 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
     private BluetoothGatt    mBluetoothGatt;
     private ArrayList<String> deviceNames = new ArrayList<>();
     private String myoName = null;
+    private SharedPreferences prefs;
 
     private ArrayAdapter<String> adapter;
 
@@ -74,26 +75,25 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
                 myoName = item;
 
 
-                SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
+                prefs = getSharedPreferences("signson", MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString("myo", myoName);
                 editor.commit();
-
+                String status = prefs.getString("status","x");
                 Intent intent;
-                intent = new Intent(getApplicationContext(), MyoActivity.class);
+                Log.i("Status", "[" + status + "]");
+                if (status.equals("1")) {
+                    intent = new Intent(getApplicationContext(), MyoActivity.class);
+                    intent.putExtra("type", "1");
+                    Log.i("Status Entrou", "[" + status + "]");
+                }else{
+                    intent = new Intent(getApplicationContext(), SignalListActivity.class);
+                    intent.putExtra("type", "0");
+                }
                 startActivity(intent);
 
             }
         });
-
-        /*Button menu = (Button) findViewById(R.id.menuBtn);
-        menu.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                menui = new MenuActivity();
-                menui.initiatePopupWindow(MyoListActivity.this, v);
-            }
-        });*/
-
     }
 
     @Override

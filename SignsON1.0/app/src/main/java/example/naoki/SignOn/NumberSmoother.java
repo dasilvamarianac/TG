@@ -7,10 +7,10 @@ import java.util.ArrayList;
  */
 public class NumberSmoother {
     private final static int SMOOTHING_LENGTH = 5;
-    private final static int THRESHOLD_LENGTH = 3;
+    //private final static int THRESHOLD_LENGTH = 5;
 
     private ArrayList<Integer> gestureNumArray = new ArrayList<>();
-    private int[] numCounter = {0,0,0};
+    private int[] numCounter = {0,0,0,0,0};
     private int storageDataCount = 0;
 
     public void addArray(Integer gestureNum) {
@@ -29,9 +29,9 @@ public class NumberSmoother {
         }
     }
 
-    public int getSmoothingNumber() {
-        for (int i_element = 0; i_element < 3; i_element++) {
-            if (numCounter[i_element] >= THRESHOLD_LENGTH) {
+    public int getSmoothingNumber(int comp) {
+        for (int i_element = 0; i_element < 5; i_element++) {
+            if (numCounter[i_element] >= comp) {
                 return i_element;
             }
         }
