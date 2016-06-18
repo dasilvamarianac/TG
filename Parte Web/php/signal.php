@@ -143,6 +143,10 @@
 					echo json_encode($json);	
 				}else{
 					$json['completed'] = '0';
+					$query = "UPDATE user
+							  SET status = '1'
+							  WHERE idUser = $user";
+					$updated = mysqli_query($this -> connection, $query);
 					echo json_encode($json);
 				}
 			}

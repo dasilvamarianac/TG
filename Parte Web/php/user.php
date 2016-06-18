@@ -14,19 +14,27 @@
 		
 		public function login($email,$password)
 		{
-			$query = "Select * from user where email='$email' and password = '$password' ";
+			$query = "Select * from user where email='$email'";
 			$result = mysqli_query($this->connection, $query);
 			if(mysqli_num_rows($result)>0){
-				
-				$row = mysqli_fetch_assoc($result);
-        		$id = $row["idUser"];				
-				$json['success'] = 'Bem Vindo';
-				$json['id'] = $id;
-				echo json_encode($json);
-				mysqli_close($this -> connection);
+				$query = "Select * from user where email='$email' and password = '$password' ";
+				$result = mysqli_query($this->connection, $query);
+				if(mysqli_num_rows($result)>0){
+					
+					$row = mysqli_fetch_assoc($result);				
+					$json['success'] = 'Bem Vindo';
+					$json['id'] =  $row["idUser"];
+					$json['status'] = $row["status"];
+					echo json_encode($json);
+					mysqli_close($this -> connection);
 
+				}else{
+					$json['error'] = "Senha";
+					echo json_encode($json);
+					mysqli_close($this->connection);
+				}
 			}else{
-				$json['error'] = "Usuário ou senha inválidos";
+				$json['error'] = "Usuario";
 				echo json_encode($json);
 				mysqli_close($this->connection);
 			}

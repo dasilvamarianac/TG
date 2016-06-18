@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -71,7 +72,7 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListView listView = (ListView) parent;
                 String item = (String) listView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), item + " connect", Toast.LENGTH_SHORT).show();
+
                 myoName = item;
 
 
@@ -160,7 +161,7 @@ public class MyoListActivity extends ActionBarActivity implements BluetoothAdapt
                     mBluetoothAdapter.stopLeScan(MyoListActivity.this);
 
                     adapter.notifyDataSetChanged();
-                    Toast.makeText(getApplicationContext(), "Stop Device Scan", Toast.LENGTH_SHORT).show();
+
 
                 }
             }, SCAN_PERIOD);

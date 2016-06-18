@@ -109,31 +109,32 @@ public class UserActivity extends Activity {
         boolean cancel = false;
         View focusView = null;
 
-        if (TextUtils.isEmpty(email)) {
-            login.setError(getString(R.string.error_field_required));
+        if ((TextUtils.isEmpty(email))||(!isEmailValid(email))) {
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.eemail);
+            toast.setView(view);
+            toast.show();
             focusView = login;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            login.setError(getString(R.string.error_invalid_email));
-            focusView = login;
-            cancel = true;
-        } else if(TextUtils.isEmpty(passwords)){
-            password.setError(getString(R.string.error_field_required));
+        } else if((TextUtils.isEmpty(passwords))||(!isPasswordValid(passwords))){
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.esenha);
+            toast.setView(view);
+            toast.show();
             focusView = password;
             cancel = true;
-        } else if(!isPasswordValid(passwords)){
-            password.setError(getString(R.string.error_invalid_password));
-            focusView = password;
-            cancel = true;
-        } else if(TextUtils.isEmpty(confp)) {
-            conf.setError(getString(R.string.error_field_required));
-            focusView = conf;
-            cancel = true;
-        } else if (! confp.equals(passwords)) {
-            conf.setError(getString(R.string.error_incorrect_password));
+        } else if((TextUtils.isEmpty(confp)) || (! confp.equals(passwords))) {
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.esenha);
+            toast.setView(view);
+            toast.show();
             focusView = conf;
             cancel = true;
         }
+
 
         if (cancel) {
             focusView.requestFocus();
@@ -146,10 +147,19 @@ public class UserActivity extends Activity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         if(jsonObject.names().get(0).equals("success")){
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
+                            Toast toast = new Toast(getApplicationContext());
+                            ImageView view = new ImageView(getApplicationContext());
+                            view.setImageResource(R.drawable.ok);
+                            toast.setView(view);
+                            toast.show();
                             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         }else {
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                            Toast toast = new Toast(getApplicationContext());
+                            ImageView view = new ImageView(getApplicationContext());
+                            view.setImageResource(R.drawable.euser);
+                            toast.setView(view);
+                            toast.show();
+                            finish();
                         }
 
                     } catch (JSONException e) {
@@ -183,15 +193,19 @@ public class UserActivity extends Activity {
         View focusView = null;
 
         if(TextUtils.isEmpty(passwords)){
-            password.setError(getString(R.string.error_field_required));
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.esenha);
+            toast.setView(view);
+            toast.show();
             focusView = password;
             cancel = true;
-        } else if(TextUtils.isEmpty(confp)) {
-           conf.setError(getString(R.string.error_field_required));
-           focusView = conf;
-           cancel = true;
-        } else if(!isPasswordValid(confp)){
-            conf.setError(getString(R.string.error_invalid_password));
+        } else if((TextUtils.isEmpty(confp)) || (!isPasswordValid(confp))){
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.esenha);
+            toast.setView(view);
+            toast.show();
             focusView = conf;
             cancel = true;
         }
@@ -207,11 +221,19 @@ public class UserActivity extends Activity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         if(jsonObject.names().get(0).equals("success")){
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            Toast toast = new Toast(getApplicationContext());
+                            ImageView view = new ImageView(getApplicationContext());
+                            view.setImageResource(R.drawable.ok);
+                            toast.setView(view);
+                            toast.show();
                             finish();
                         }else {
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                            Toast toast = new Toast(getApplicationContext());
+                            ImageView view = new ImageView(getApplicationContext());
+                            view.setImageResource(R.drawable.esenha);
+                            toast.setView(view);
+                            toast.show();
+                            password.requestFocus();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

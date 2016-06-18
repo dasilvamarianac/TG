@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,9 +23,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,6 +42,7 @@ public class LoginActivity extends Activity {
     private RequestQueue requestQueue;
     private static final String URL = "http://signson.orgfree.com/php/login.php";
     private static final String URL2 = "http://signson.orgfree.com/php/email.php";
+    private static final String URL3 = "http://signson.orgfree.com/php/listug.php";
     private StringRequest request;
 
 
@@ -92,19 +96,26 @@ public class LoginActivity extends Activity {
         View focusView = null;
 
         // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            login.setError(getString(R.string.error_field_required));
-            focusView = login;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
-            login.setError(getString(R.string.error_invalid_email));
+        if ((TextUtils.isEmpty(email))||(!isEmailValid(email))) {
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.eemail);
+            toast.setView(view);
+            toast.show();
             focusView = login;
             cancel = true;
         } else if(TextUtils.isEmpty(passwords)){
-            password.setError(getString(R.string.error_field_required));
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.esenha);
+            toast.setView(view);
+            toast.show();
             focusView = password;
             cancel = true;
         }
+
+
+
 
 
         if (cancel) {
@@ -118,19 +129,33 @@ public class LoginActivity extends Activity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         if (jsonObject.names().get(0).equals("success")) {
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
 
                             SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putString("logado", jsonObject.getString("id"));
                             editor.putString("status", jsonObject.getString("status"));
                             editor.commit();
-
-
-
+                            Log.i("STATUSSS", jsonObject.getString("status"));
+                            if (jsonObject.getString("status").equals("1")){
+                                Log.i("STATUS2", jsonObject.getString("status"));
+                                Charge(jsonObject.getString("id"));
+                            }
                             startActivity(new Intent(getApplicationContext(), MyoListActivity.class));
+
                         } else {
-                            Toast.makeText(getApplicationContext(), "Erro" + jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+
+                            Toast toast = new Toast(getApplicationContext());
+                            ImageView view = new ImageView(getApplicationContext());
+                            if (jsonObject.getString("error").equals("Senha")) {
+                                view.setImageResource(R.drawable.esenha);
+                                password.requestFocus();
+                            }else{
+                                view.setImageResource(R.drawable.eemail);
+                                login.requestFocus();
+                            }
+                            toast.setView(view);
+                            toast.show();
+
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -146,7 +171,6 @@ public class LoginActivity extends Activity {
                     HashMap<String, String> hashMap = new HashMap<String, String>();
                     hashMap.put("email", login.getText().toString());
                     hashMap.put("password", password.getText().toString());
-
                     return hashMap;
                 }
             };
@@ -163,12 +187,12 @@ public class LoginActivity extends Activity {
         View focusView = null;
 
         // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            login.setError(getString(R.string.error_field_required));
-            focusView = login;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
-            login.setError(getString(R.string.error_invalid_email));
+        if ((TextUtils.isEmpty(email))||(!isEmailValid(email))) {
+            Toast toast = new Toast(getApplicationContext());
+            ImageView view = new ImageView(getApplicationContext());
+            view.setImageResource(R.drawable.eemail);
+            toast.setView(view);
+            toast.show();
             focusView = login;
             cancel = true;
         }
@@ -182,12 +206,21 @@ public class LoginActivity extends Activity {
                 @Override
                 public void onResponse(String response) {
                     try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        if (jsonObject.names().get(0).equals("success")) {
-                            Toast.makeText(getApplicationContext(), jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
+                            JSONObject jsonObject = new JSONObject(response);
+                            if (jsonObject.names().get(0).equals("success")) {
+                                Toast toast = new Toast(getApplicationContext());
+                                ImageView view = new ImageView(getApplicationContext());
+                                view.setImageResource(R.drawable.ok);
+                                toast.setView(view);
+                                toast.show();
 
                             } else {
-                                Toast.makeText(getApplicationContext(), "Erro" + jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                                    Toast toast = new Toast(getApplicationContext());
+                                    ImageView view = new ImageView(getApplicationContext());
+                                    view.setImageResource(R.drawable.eemail);
+                                    toast.setView(view);
+                                    toast.show();
+                                    login.requestFocus();
                             }
 
                         } catch (JSONException e) {
@@ -215,6 +248,54 @@ public class LoginActivity extends Activity {
     private boolean isEmailValid(String email) {
 
         return email.contains("@") && email.contains(".");
+    }
+
+    public void Charge(final String user){
+
+        requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
+        final ArrayList<EmgData> compareGesture = new ArrayList<>();
+        request = new StringRequest(Request.Method.POST, URL3, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.e("JSON RESP LIST", response);
+                try {
+                    String line;
+                    JSONArray array = new JSONArray(response);
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject row = array.getJSONObject(i);
+                        line = row.getString("line");
+                        EmgData tempData  = new EmgData();
+                        tempData.setLine(line);
+                        compareGesture.add(tempData);
+                        compareGesture.get(i).setLine(line);
+                        Log.i("LINHA", compareGesture.get(i).getLine());
+                    }
+                    for (int i = 0; i < array.length(); i++) {
+                        Log.i("LINHA", compareGesture.get(i).getLine());
+                    }
+                    MyoDataFileReader dataFileReader = new MyoDataFileReader("SignsOn", "userdata.dat");
+                    dataFileReader.saveMAX(compareGesture);
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.e("JSON RESP LIST", "Entrou Listed4");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MyoActivity.getContext(), "Erro de conexão " + error, Toast.LENGTH_SHORT).show();
+            }
+        }){
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("user", user);
+                return hashMap;
+            }
+        };
+        requestQueue.add(request);
+
     }
 
 

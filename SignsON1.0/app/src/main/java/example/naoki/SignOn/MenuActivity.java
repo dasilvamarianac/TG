@@ -7,12 +7,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
+
+import java.io.File;
 
 import example.naoki.ble_myo.R;
 
@@ -97,18 +100,19 @@ public class MenuActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
-                    pwindo.dismiss();
-                    SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
-                    prefs.edit().clear().commit();
 
 
-                    Intent mStartActivity = new Intent(c, MainActivity.class);
-                    int mPendingIntentId = 123456;
-                    PendingIntent mPendingIntent = PendingIntent.getActivity(c, mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
-                    AlarmManager mgr = (AlarmManager)c.getSystemService(Context.ALARM_SERVICE);
-                    mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
-                    System.exit(0);
 
+                    File file = new File("sdcard/SignsOn/userdata.dat");
+                    boolean deleted = file.delete();
+
+                    SharedPreferences prefs = c.getSharedPreferences("signson", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("logado", "x");
+                    editor.commit();
+
+                    Intent intent = new Intent(c, MainActivity.class);;
+                    c.startActivity(intent);
 
                 }
             });
