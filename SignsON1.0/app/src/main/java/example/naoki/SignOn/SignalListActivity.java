@@ -40,7 +40,7 @@ public class SignalListActivity extends Activity implements AdapterView.OnItemCl
     private SignalAdapter adapterListView;
     private ArrayList<SignalListView> itens;
     private RequestQueue requestQueue;
-    private static final String URL = "http://signson.orgfree.com/php/signalslist.php";
+    private static final String URL = "http://signsonapp.com/php/signalslist.php";
     private StringRequest request;
     @Override
     protected void onCreate(Bundle instance) {

@@ -93,7 +93,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private static Context mContext;
 
     private RequestQueue requestQueue;
-    private static final String URL = "http://signson.orgfree.com/php/next.php";
+    private static final String URL = "http://signsonapp.com/php/next.php";
     private StringRequest request;
 
     @Override

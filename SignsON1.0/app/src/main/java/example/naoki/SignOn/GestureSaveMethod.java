@@ -45,9 +45,9 @@ public class GestureSaveMethod {
     private int gestureCounter = 0;
 
     private RequestQueue requestQueue;
-    private static final String URLL = "http://signson.orgfree.com/php/listug.php";
-    private static final String URL = "http://signson.orgfree.com/php/novoS.php";
-    private static final String URLC = "http://signson.orgfree.com/php/completed.php";
+    private static final String URLL = "http://signsonapp.com/php/listug.php";
+    private static final String URL = "http://signsonapp.com/php/novoS.php";
+    private static final String URLC = "http://signsonapp.com/php/completed.php";
     private StringRequest request;
     private String signal;
 

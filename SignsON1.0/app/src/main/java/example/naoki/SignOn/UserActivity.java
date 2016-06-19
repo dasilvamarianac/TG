@@ -41,8 +41,8 @@ public class UserActivity extends Activity {
     private TextView status;
     private MenuActivity menui;
     private RequestQueue requestQueue;
-    private static final String URL = "http://signson.orgfree.com/php/novo.php";
-    private static final String URL2 = "http://signson.orgfree.com/php/edit.php";
+    private static final String URL = "http://signsonapp.com/php/novo.php";
+    private static final String URL2 = "http://signsonapp.com/php/edit.php";
     private StringRequest request;
 
     @Override

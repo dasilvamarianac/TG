@@ -40,9 +40,9 @@ public class LoginActivity extends Activity {
     private EditText password;
     private TextView status;
     private RequestQueue requestQueue;
-    private static final String URL = "http://signson.orgfree.com/php/login.php";
-    private static final String URL2 = "http://signson.orgfree.com/php/email.php";
-    private static final String URL3 = "http://signson.orgfree.com/php/listug.php";
+    private static final String URL = "http://signsonapp.com/php/login.php";
+    private static final String URL2 = "http://signsonapp.com/php/email.php";
+    private static final String URL3 = "http://signsonapp.com/php/listug.php";
     private StringRequest request;
 
 
