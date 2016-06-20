@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="example.naoki.SignOn.MenuActivity"
+    tools:context="fatec.tg.SignsOn.MenuActivity"
     android:id="@+id/popup">
 
     <ImageView

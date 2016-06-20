@@ -27,13 +27,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="example.naoki.SignOn.MyoListActivity"
+            android:name="fatec.tg.SignsOn.MyoListActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="example.naoki.SignOn.HelpActivity"
+            android:name="fatec.tg.SignsOn.HelpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="example.naoki.SignOn.MainActivity"
+            android:name="fatec.tg.SignsOn.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,21 +42,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="example.naoki.SignOn.LoginActivity"
+            android:name="fatec.tg.SignsOn.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
-            android:name="example.naoki.SignOn.UserActivity"
+            android:name="fatec.tg.SignsOn.UserActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="example.naoki.SignOn.MenuActivity"
+            android:name="fatec.tg.SignsOn.MenuActivity"
             android:label="@string/title_activity_menu" />
         <activity
-            android:name="example.naoki.SignOn.SignalListActivity"
+            android:name="fatec.tg.SignsOn.SignalListActivity"
             android:label="@string/title_activity_signal_list" >
         </activity>
         <activity
-            android:name="example.naoki.SignOn.MyoActivity"
+            android:name="fatec.tg.SignsOn.MyoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
