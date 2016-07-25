@@ -13,7 +13,7 @@ public class GestureDetectMethod {
     private final static Double THRESHOLD = 0.05;
 
     private final ArrayList<EmgData> compareGesture;
-    private final String[] letter = new String[]{"a","b","c","d","e", "f", "g", "h", "i", "j"};
+    private final String[] letter = new String[]{"a","l","o"};
 
     private int streamCount = 0;
     private EmgData streamingMaxData;
@@ -26,11 +26,11 @@ public class GestureDetectMethod {
     public GestureDetectMethod(ArrayList<EmgData> gesture) {
 
         compareGesture = gesture;
-        //comp = compareGesture.size();
+        comp = compareGesture.size();
     }
 
     private String getEnum(int i_gesture) {
-        for(int i = 0 ; i < COMPARE_NUM; i++ ){
+        for(int i = 0 ; i < comp; i++ ){
             if (i_gesture == i){
                 return letter[i_gesture];
             }
@@ -54,7 +54,7 @@ public class GestureDetectMethod {
             if (streamCount == STREAM_DATA_LENGTH){
                 detect_distance = getThreshold();
                 detect_Num = -1;
-                for (int i_gesture = 0;i_gesture < COMPARE_NUM ;i_gesture++) {
+                for (int i_gesture = 0;i_gesture < comp ;i_gesture++) {
                     EmgData compData = compareGesture.get(i_gesture);
                     Log.i("DISTANCE","compData: "+ compareGesture.get(i_gesture).getLine());
                     double distance = distanceCalculation(streamingMaxData, compData);
@@ -72,7 +72,7 @@ public class GestureDetectMethod {
                 streamCount = 0;
             }
         }
-        return getEnum(numberSmoother.getSmoothingNumber());
+        return getEnum(numberSmoother.getSmoothingNumber(comp));
     }
 
     private double getThreshold() {

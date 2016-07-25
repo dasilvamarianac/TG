@@ -22,7 +22,7 @@ public class GestureSaveModel implements IGestureDetectModel{
 
             if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Not_Saved) {
                 action("SAVE");
-//                action(String.valueOf(gesture.getGestureCounter()));
+
             } else if (saveMethod.getSaveState() == GestureSaveMethod.SaveState.Have_Saved) {
                 action("SAVED");
             }

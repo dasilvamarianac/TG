@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by naoki on 15/04/17.
  */
 public class NumberSmoother {
-    private final static int SMOOTHING_LENGTH = 5;
+    private final static int SMOOTHING_LENGTH = 75;
     private final static int THRESHOLD_LENGTH = 3;
 
     private ArrayList<Integer> gestureNumArray = new ArrayList<>();
@@ -29,9 +29,9 @@ public class NumberSmoother {
         }
     }
 
-    public int getSmoothingNumber() {
-        for (int i_element = 0; i_element < 3; i_element++) {
-            if (numCounter[i_element] >= THRESHOLD_LENGTH) {
+    public int getSmoothingNumber(Integer comp) {
+        for (int i_element = 0; i_element < comp; i_element++) {
+            if (numCounter[i_element] >= comp) {
                 return i_element;
             }
         }

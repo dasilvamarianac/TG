@@ -112,10 +112,6 @@ public class LoginActivity extends Activity {
             cancel = true;
         }
 
-
-
-
-
         if (cancel) {
             focusView.requestFocus();
         } else {

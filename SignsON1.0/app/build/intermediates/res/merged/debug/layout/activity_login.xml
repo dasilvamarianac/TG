@@ -6,6 +6,18 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/emailEdt"
+        android:hint="E-MAIL"
+        android:editable="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="25dp"
+        android:layout_above="@+id/passEdt"
+        android:layout_toEndOf="@+id/cancelBtn" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:hint="SENHA"
         android:id="@+id/passEdt"
         android:editable="true"
@@ -56,18 +68,6 @@
         android:layout_above="@+id/cancelBtn"
         android:layout_alignStart="@+id/emailImg"
         android:layout_marginBottom="280dp" />
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/emailEdt"
-        android:hint="E-MAIL"
-        android:editable="true"
-        android:layout_marginBottom="18dp"
-        android:layout_marginStart="25dp"
-        android:layout_above="@+id/passEdt"
-        android:layout_toEndOf="@+id/cancelBtn" />
 
 
 </RelativeLayout>

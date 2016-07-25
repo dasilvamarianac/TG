@@ -205,7 +205,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Bom dia"
         android:id="@+id/tTranslate"
         android:layout_alignStart="@+id/emgDataTextView"
         android:layout_above="@+id/relativeLayout"
@@ -213,7 +212,8 @@
         android:visibility="visible"
         android:layout_toStartOf="@+id/menuBtn"
         android:layout_alignEnd="@+id/emgDataTextView"
-        android:background="@android:drawable/editbox_dropdown_light_frame" />
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:hint="Bom dia" />
 
     <TextView
         android:layout_width="wrap_content"

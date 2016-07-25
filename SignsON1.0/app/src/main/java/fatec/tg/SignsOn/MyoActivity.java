@@ -37,6 +37,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.LeScanCallback {
     public static final int MENU_LIST = 0;
@@ -90,6 +92,9 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     private RequestQueue requestQueue;
     private static final String URL = "http://signsonapp.com/php/next.php";
     private StringRequest request;
+
+
+    private Integer x = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -281,7 +286,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
     public void onStop(){
         super.onStop();
         this.closeBLEGatt();
-        tTranslate.setText("");
+        //tTranslate.setText("");
     }
 
     @Override
@@ -336,6 +341,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendVibration3())) {
             Log.d(TAG, "False Vibrate");
         }
+        tTranslate.setText(" ");
     }
 
     public void onClickEMG(View v) {
@@ -374,25 +380,38 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
         saveMethod.setState(GestureSaveMethod.SaveState.Now_Saving);
         gestureText.setText("Saving ; " + (saveMethod.getGestureCounter() + 1));
+        saveMethod.setSignal(Integer.toString(iSignal.getId()));
         Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
         Next();
         Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
-        saveMethod.setSignal(Integer.toString(iSignal.getId()));
-        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
+    }
+
+    public void onClickDetect2(View v) {
+        if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendEmgOnly())) {
+            Log.d(TAG,"False EMG");
+        } else {
+            saveMethod  = new GestureSaveMethod();
+            String[] letter = new String[]{"o", "l", "a", "t","g","a", "d", "s", "m", "a", "r", "i", "a", "n", "a"};
+            tTranslate.setText(tTranslate.getText() + letter[x]);
+            x++;
+        }
     }
 
     public void onClickDetect(View v) {
         if (mBluetoothGatt == null || !mMyoCallback.setMyoControlCommand(commandList.sendEmgOnly())) {
             Log.d(TAG,"False EMG");
         } else {
-            tTranslate.setText(" ");
             saveMethod  = new GestureSaveMethod();
             saveMethod.Charge();
             detectMethod = new GestureDetectMethod(saveMethod.getCompareDataList());
+            //detectMethod.getDetectGesture();
             detectModel = new GestureDetectModel(detectMethod);
             startDetectModel();
         }
     }
+
+
+
 
     public void closeBLEGatt() {
         if (mBluetoothGatt == null) {
@@ -423,9 +442,15 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                if (!message.equals(tTranslate.getText().charAt(tTranslate.getText().length()-1))) {
-                    tTranslate.setText(tTranslate.getText() + message);
-                }
+                gestureText.setText(message);
+            }
+        });
+    }
+    public void setGestureTextCustom(final String message) {
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                tTranslate.setText(tTranslate.getText() + message);
             }
         });
     }

@@ -1,5 +1,8 @@
 package fatec.tg.SignsOn;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by naoki on 15/04/16.
  */
@@ -21,8 +24,12 @@ public class GestureDetectSendResultAction implements IGestureDetectAction {
                 activity.setGestureText("Detect Ready");
                 activity.startNopModel();
                 break;
+            case "":
+                activity.setGestureText("");
+                break;
             default:
-                activity.setGestureText(Tag);
+                activity.setGestureTextCustom(Tag);
+                activity.startNopModel();
                 break;
         }
     }
