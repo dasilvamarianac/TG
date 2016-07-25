@@ -22,10 +22,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.UUID;
 
-/**
- * Created by naoki on 15/04/15.
- */
- 
 public class MyoGattCallback extends BluetoothGattCallback {
     /** Service ID */
     private static final String MYO_CONTROL_ID  = "d5060001-a904-deb9-4748-2c7f4a124842";

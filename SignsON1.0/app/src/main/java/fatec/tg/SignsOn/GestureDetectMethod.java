@@ -1,19 +1,13 @@
 package fatec.tg.SignsOn;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
-/**
- * Created by naoki on 15/04/17.
- */
 public class GestureDetectMethod {
-    private final static int COMPARE_NUM = 3;
     private final static int STREAM_DATA_LENGTH = 5;
     private final static Double THRESHOLD = 0.05;
 
     private final ArrayList<EmgData> compareGesture;
-    private final String[] letter = new String[]{"a","l","o"};
+    private final String[] letter = new String[]{"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","x","z"};
 
     private int streamCount = 0;
     private EmgData streamingMaxData;
@@ -35,13 +29,11 @@ public class GestureDetectMethod {
                 return letter[i_gesture];
             }
         }
-        Log.i("DETECTED SINAL", Integer.toString(i_gesture));
         return("");
     }
 
     public String getDetectGesture(byte[] data) {
         EmgData streamData = new EmgData(new EmgCharacteristicData(data));
-        Log.i("DETECTED SINAL", streamData.getLine());
         streamCount++;
         if (streamCount == 1){
             streamingMaxData = streamData;
@@ -56,17 +48,11 @@ public class GestureDetectMethod {
                 detect_Num = -1;
                 for (int i_gesture = 0;i_gesture < comp ;i_gesture++) {
                     EmgData compData = compareGesture.get(i_gesture);
-                    Log.i("DISTANCE","compData: "+ compareGesture.get(i_gesture).getLine());
                     double distance = distanceCalculation(streamingMaxData, compData);
                     if (detect_distance > distance) {
                         detect_distance = distance;
                         detect_Num = i_gesture;
                     }
-                    Log.i("DISTANCE","Detect Num: "+ Integer.toString(i_gesture));
-                    Log.i("DISTANCE","streamingMaxData: "+ streamingMaxData.getLine());
-                    Log.i("DISTANCE","compData: "+ compareGesture.get(i_gesture).getLine());
-                    Log.i("DISTANCE","detect_distance: "+ Double.toString(detect_distance));
-                    Log.i("DISTANCE","distance: "+ distance);
                 }
                 numberSmoother.addArray(detect_Num);
                 streamCount = 0;

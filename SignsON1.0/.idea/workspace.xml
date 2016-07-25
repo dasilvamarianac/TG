@@ -22,64 +22,103 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="049db0ca-6e4c-47ad-8d83-a471d6aea645" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\build\intermediates\classes\debug\fatec\tg\SignsOn\SavedSharedPreference.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mariana\Documents\GitHub\TG\SignsON1.0\app\src\main\java\fatec\tg\SignsOn\SavedSharedPreference.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-2bca6c6c77a2da0942dc94cf9349205212e4de6a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-2bca6c6c77a2da0942dc94cf9349205212e4de6a.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_signal.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_signal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_signal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_signal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-b11bd6ed8844fc3abf08147e2f4540720d094296.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-b11bd6ed8844fc3abf08147e2f4540720d094296.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/fatec/tg/SignsOn/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/fatec/tg/SignsOn/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/BluetoothListActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/BluetoothListActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/BluetoothListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/BluetoothListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/ByteReader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/ByteReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/EmgCharacteristicData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/EmgCharacteristicData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/EmgData.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/EmgData.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectMethod.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/NumberSmoother.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/NumberSmoother.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/UserActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/UserActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d4dec426a3d5f4ce73e6ae4d085dedc9f9084f31.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d4dec426a3d5f4ce73e6ae4d085dedc9f9084f31.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4e23404526e6cdd4e9e7a1a2c38953ffe0fd5ac3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4e23404526e6cdd4e9e7a1a2c38953ffe0fd5ac3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e90f083ea2017ae8fde798de20d1516583b7167a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e90f083ea2017ae8fde798de20d1516583b7167a.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-de80dae57f7c8a345c6c1f9802448856b485754e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-de80dae57f7c8a345c6c1f9802448856b485754e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-49762a31ed54fc07ae1f2287f12d66b0ed3c3244.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-49762a31ed54fc07ae1f2287f12d66b0ed3c3244.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d870504a683c069ce4b99b08797ff31a17720b12.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d870504a683c069ce4b99b08797ff31a17720b12.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectModelManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectModelManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectSendResultAction.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureDetectSendResultAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$SaveState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod$SaveState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveMethod.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/GestureSaveModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MenuActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyApplication.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoCommandList.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoCommandList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoDataFileReader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoDataFileReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/MyoGattCallback.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/NopModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/NopModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/NumberSmoother.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/NumberSmoother.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/fatec/tg/SignsOn/SignalListView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/BluetoothListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/BluetoothListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/ByteReader.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/ByteReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgCharacteristicData.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgCharacteristicData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgData.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModelManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModelManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveMethod.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectAction.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MenuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MenuActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoCommandList.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoCommandList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoDataFileReader.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoDataFileReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoGattCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoGattCallback.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NopModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NopModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SignsON1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,60 +159,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GestureDetectMethod.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NumberSmoother.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyoActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java">
+      <file leaf-file-name="SignalAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="399" column="29" selection-start-line="399" selection-start-column="29" selection-end-line="399" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6934#6935#0" expanded="true" />
-                <element signature="e#6965#6966#0" expanded="true" />
-                <element signature="e#15490#15491#0" expanded="true" />
-                <element signature="e#15563#15564#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestureDetectSendResultAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java">
+      <file leaf-file-name="SignalListActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+              <caret line="74" column="53" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignalListView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/UserActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30381945">
+              <caret line="226" column="37" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyoCommandList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoCommandList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyoDataFileReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoDataFileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyoGattCallback.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoGattCallback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyoListActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoListActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NopModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NopModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1561,20 +1644,36 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/UserActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveMethod.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDtModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDtMethod.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_signal.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/ByteReader.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgCharacteristicData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModelManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectAction.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoCommandList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoDataFileReader.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoGattCallback.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NopModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/BluetoothListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveMethod.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java" />
       </list>
     </option>
   </component>
@@ -1629,70 +1728,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SignsON1.0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SignsON1.0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SignsON1.0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SignsOn" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SignsON1.0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1710,7 +1745,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="YT9115MQZJ" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
   </component>
@@ -1897,7 +1932,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1914,7 +1949,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16791044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16791044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1958,6 +1993,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1965,6 +2003,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1972,6 +2011,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1981,10 +2021,6 @@
           <caret line="449" column="94" selection-start-line="449" selection-start-column="94" selection-end-line="449" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6934#6935#0" expanded="true" />
-            <element signature="e#6965#6966#0" expanded="true" />
-            <element signature="e#15490#15491#0" expanded="true" />
-            <element signature="e#15563#15564#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1993,6 +2029,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2008,6 +2047,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2015,6 +2057,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2022,6 +2065,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2031,10 +2075,6 @@
           <caret line="449" column="94" selection-start-line="449" selection-start-column="94" selection-end-line="449" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6934#6935#0" expanded="true" />
-            <element signature="e#6965#6966#0" expanded="true" />
-            <element signature="e#15490#15491#0" expanded="true" />
-            <element signature="e#15563#15564#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2043,6 +2083,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2068,6 +2111,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2075,6 +2121,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2082,6 +2129,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2091,10 +2139,6 @@
           <caret line="449" column="94" selection-start-line="449" selection-start-column="94" selection-end-line="449" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6934#6935#0" expanded="true" />
-            <element signature="e#6965#6966#0" expanded="true" />
-            <element signature="e#15490#15491#0" expanded="true" />
-            <element signature="e#15563#15564#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2103,104 +2147,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/UserActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.025954198">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NopModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.129771">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10381679">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoDataFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20763358">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/BluetoothListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/ByteReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgCharacteristicData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="67" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/HelpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.129771">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2220,34 +2169,6 @@
       </provider>
       <provider editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoGattCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9465649">
-          <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoCommandList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.259542">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list.xml">
@@ -2270,86 +2191,239 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/BluetoothListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14756945">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state vertical-scroll-proportion="-6.275862">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectAction.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/ByteReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.093235835">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="7" />
+        <state vertical-scroll-proportion="-6.275862">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModelManager.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgCharacteristicData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6493056">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.3448277">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/EmgData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9310346">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38020834">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.013888889">
-          <caret line="155" column="21" selection-start-line="155" selection-start-column="21" selection-end-line="155" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state vertical-scroll-proportion="-1.7586207">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectModelManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="399" column="29" selection-start-line="399" selection-start-column="29" selection-end-line="399" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6934#6935#0" expanded="true" />
-            <element signature="e#6965#6966#0" expanded="true" />
-            <element signature="e#15490#15491#0" expanded="true" />
-            <element signature="e#15563#15564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state vertical-scroll-proportion="-1.7586207">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectSendResultAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        <state vertical-scroll-proportion="-6.275862">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.275862">
+          <caret line="229" column="48" selection-start-line="229" selection-start-column="45" selection-end-line="229" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureDetectMethod.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/GestureSaveModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/HelpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/IGestureDetectModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.6896553">
+          <caret line="273" column="40" selection-start-line="273" selection-start-column="40" selection-end-line="273" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6206896">
+          <caret line="472" column="90" selection-start-line="472" selection-start-column="90" selection-end-line="472" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoCommandList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoDataFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoGattCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/MyoListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NopModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/NumberSmoother.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="53" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/SignalListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fatec/tg/SignsOn/UserActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30381945">
+          <caret line="226" column="37" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

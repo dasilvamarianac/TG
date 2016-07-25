@@ -251,7 +251,6 @@ public class LoginActivity extends Activity {
         request = new StringRequest(Request.Method.POST, URL3, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("JSON RESP LIST", response);
                 try {
                     String line;
                     JSONArray array = new JSONArray(response);
@@ -273,7 +272,6 @@ public class LoginActivity extends Activity {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Log.e("JSON RESP LIST", "Entrou Listed4");
                 }
             }
         }, new Response.ErrorListener() {

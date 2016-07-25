@@ -21,9 +21,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by naoki on 15/04/17.
- */
 public class GestureSaveMethod {
     private final static String TAG = "SignsOn";
     private final static String FileName = "userdata.dat";
@@ -52,7 +49,6 @@ public class GestureSaveMethod {
         MyoDataFileReader dataFileReader = new MyoDataFileReader(TAG,FileName);
         compareGesture = dataFileReader.load();
         saveState = SaveState.Have_Saved;
-        Log.e("CHARGE", "Entrou");
     }
 
     public GestureSaveMethod() {
@@ -126,9 +122,7 @@ public class GestureSaveMethod {
         if (maxDataList.size() < AVERAGING_LENGTH) {
             Log.e("GestureDetect", "Small aveData : " + maxDataList.size());
         }
-        Log.e("GESTO SAVE", tempData.getLine());
         InsertData(tempData, signal);
-        Log.e("GESTO SAVE POS", tempData.getLine());
         maxDataList = new ArrayList<>();
     }
 
@@ -142,7 +136,6 @@ public class GestureSaveMethod {
         request = new StringRequest(Request.Method.POST, URLL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("JSON RESP LIST", response);
                 try {
                     String line;
                     JSONArray array = new JSONArray(response);
@@ -164,7 +157,6 @@ public class GestureSaveMethod {
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Log.e("JSON RESP LIST", "Entrou Listed4");
                 }
             }
         }, new Response.ErrorListener() {
@@ -187,16 +179,12 @@ public class GestureSaveMethod {
         final EmgData tempData = temp;
         SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson", 0);
         final String user = prefs.getString("logado", "");
-        Log.e("GESTO INSERT", tempData.getLine());
-        Log.e("SINAL INSERT", sinal);
-        Log.e("USER INSERT", user);
 
         requestQueue = Volley.newRequestQueue(MyoActivity.getContext());
         request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
-                Log.e("JSON RESP INS", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.names().get(0).equals("success")){
@@ -247,11 +235,9 @@ public class GestureSaveMethod {
 
             @Override
             public void onResponse(String response) {
-                Log.e("JSON RESP COMP", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.names().get(0).equals("completed")){
-                        Log.e("JSON RESP COMP", "Entrou Completed");
 
                         SharedPreferences prefs = MyoActivity.getContext().getSharedPreferences("signson",0);
                         SharedPreferences.Editor editor = prefs.edit();

@@ -1,11 +1,5 @@
 package fatec.tg.SignsOn;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-/**
- * Created by naoki on 15/04/16.
- */
 public class GestureDetectSendResultAction implements IGestureDetectAction {
     MyoActivity activity;
 

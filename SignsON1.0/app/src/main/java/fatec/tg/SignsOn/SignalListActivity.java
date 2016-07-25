@@ -1,6 +1,6 @@
 package fatec.tg.SignsOn;
 
-        import android.app.Activity;
+import android.app.Activity;
         import android.content.Intent;
         import android.content.SharedPreferences;
         import android.graphics.Color;
@@ -29,9 +29,6 @@ package fatec.tg.SignsOn;
         import java.util.HashMap;
         import java.util.Map;
 
-/**
- * Created by Mariana on 4/3/2016.
- */
 public class SignalListActivity extends Activity implements AdapterView.OnItemClickListener {
     private MenuActivity menui;
     private ListView listView;
@@ -76,7 +73,6 @@ public class SignalListActivity extends Activity implements AdapterView.OnItemCl
 
             @Override
             public void onResponse(String response) {
-                Log.i("JASON SINAIS", response);
                 try {
                     String id;
                     String image;
@@ -108,7 +104,6 @@ public class SignalListActivity extends Activity implements AdapterView.OnItemCl
                     listView.setCacheColorHint(Color.TRANSPARENT);
 
                 } catch (JSONException e) {
-                    Log.i("JASON SINAIS", response);
                     e.printStackTrace();
                 }
             }

@@ -1,8 +1,5 @@
 package fatec.tg.SignsOn;
 
-/**
- * Created by Mariana on 4/16/2016.
- */
 public class SignalListView {
     private String texto;
     private String iconeRid;

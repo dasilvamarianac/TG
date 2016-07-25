@@ -2,15 +2,11 @@ package fatec.tg.SignsOn;
 
 import java.util.ArrayList;
 
-/**
- * Created by naoki on 15/04/17.
- */
 public class NumberSmoother {
     private final static int SMOOTHING_LENGTH = 75;
-    private final static int THRESHOLD_LENGTH = 3;
 
     private ArrayList<Integer> gestureNumArray = new ArrayList<>();
-    private int[] numCounter = {0,0,0};
+    private int[] numCounter = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     private int storageDataCount = 0;
 
     public void addArray(Integer gestureNum) {

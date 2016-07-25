@@ -105,7 +105,6 @@ public class BluetoothListActivity extends ActionBarActivity implements Bluetoot
                 + device.getBondState() + ", address="
                 + device.getAddress() + ", type" + device.getType()
                 + ", uuids=" + uuid;
-        Log.d("BLEActivity", msg);
 
         if (device.getName() != null && !deviceNames.contains(device.getName())) {
             deviceNames.add(device.getName());

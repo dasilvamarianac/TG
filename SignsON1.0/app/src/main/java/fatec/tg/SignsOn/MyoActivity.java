@@ -145,7 +145,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
         SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
         deviceName = prefs.getString("myo", "");
-        Log.i("Myo: ", "[" + deviceName + "]");
 
         if (deviceName != null) {
             // Ensures Bluetooth is available on the device and it is enabled. If not,
@@ -215,22 +214,12 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
         SharedPreferences prefs = getSharedPreferences("signson", MODE_PRIVATE);
         deviceName = prefs.getString("myo", "");
-        Log.i("Myo: ", "[" + deviceName + "]");
 
         type = getIntent().getStringExtra("type");
         img = getIntent().getStringExtra("img");
         sinal = getIntent().getStringExtra("sinal");
 
-        Log.i("Log - type", type);
-
         if (type.equals("0")){ // Signal
-
-
-
-            Log.i("Log - type", type);
-            Log.i("Log - img", img);
-            Log.i("Log - sinal", sinal);
-
 
             bStopEMG.setVisibility(View.INVISIBLE);
             bDetect.setVisibility(View.INVISIBLE);
@@ -258,8 +247,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
         prefs = getSharedPreferences("signson", MODE_PRIVATE);
         deviceName = prefs.getString("myo", "");
-        Log.i("Myo: ", "[" + deviceName + "]");
-
 
         if (deviceName != null) {
             // Ensures Bluetooth is available on the device and it is enabled. If not,
@@ -381,9 +368,7 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
         saveMethod.setState(GestureSaveMethod.SaveState.Now_Saving);
         gestureText.setText("Saving ; " + (saveMethod.getGestureCounter() + 1));
         saveMethod.setSignal(Integer.toString(iSignal.getId()));
-        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
         Next();
-        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
     }
 
     public void onClickDetect2(View v) {
@@ -478,7 +463,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
 
             @Override
             public void onResponse(String response) {
-                Log.e("JSON RESP NEXT", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.getString("symbol").equals("completed")){
@@ -487,7 +471,6 @@ public class MyoActivity extends ActionBarActivity implements BluetoothAdapter.L
                         startActivity(intent);
                     }else{
                         iSignal.setId(Integer.valueOf(jsonObject.getString("idgesture")));
-                        Log.e("JSON RESP NEXT", Integer.toString(iSignal.getId()));
                         String image = jsonObject.getString("image");
                         Picasso.with(iSignal.getContext()).load(image).into(iSignal);
                     }

@@ -1,13 +1,5 @@
 package fatec.tg.SignsOn;
 
-/**
- * Created by naoki on 15/04/13.
- * 
- * This class is List of Myo Commands, allowing to
- * [https://github.com/thalmiclabs/myo-bluetooth].
- *
- */
- 
 public class MyoCommandList {
     private byte[] send_bytes_data;
 

@@ -22,9 +22,6 @@ public class MenuActivity extends Activity {
         setContentView(R.layout.activity_menu);
     }
     private PopupWindow pwindo;
-    private View layout;
-
-
 
     public boolean initiatePopupWindow(final Context c, View v) {
         try {
